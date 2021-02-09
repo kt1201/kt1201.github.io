@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>코  드  저  장  소</title>
+    <description>김기태의 블로그입니다.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 09 Feb 2021 17:12:05 +0900</pubDate>
+    <lastBuildDate>Tue, 09 Feb 2021 17:12:05 +0900</lastBuildDate>
+    <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>WordCount 코딩 및 실행</title>
+        <description>&lt;h2 id=&quot;wordcount-코딩-및-실행&quot;&gt;WordCount 코딩 및 실행&lt;/h2&gt; &lt;h4 id=&quot;eclipse&quot;&gt;eclipse&lt;/h4&gt; &lt;ol&gt; &lt;li&gt;java project 생성 (name : WordCount)&lt;/li&gt; &lt;li&gt;프로젝트 protperties - Java Build Path - Libraries - Add External JARs….&lt;/li&gt; &lt;li&gt;hadoop API 3가지 추가...</description>
+        <pubDate>Thu, 04 Jun 2020 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/hadoop/2020/06/04/WordCount.html</link>
+        <guid isPermaLink="true">http://localhost:4000/hadoop/2020/06/04/WordCount.html</guid>
+        
+        
+        <category>Hadoop</category>
+        
+      </item>
+    
+      <item>
+        <title>Hadoop 멀티모드 구축</title>
+        <description>&lt;h2 id=&quot;hadoop-멀티모드-구축&quot;&gt;Hadoop 멀티모드 구축&lt;/h2&gt; &lt;ul&gt; &lt;li&gt;Slave 생성 &lt;ul&gt; &lt;li&gt;File - Export to OVF… // Master 배포&lt;/li&gt; &lt;li&gt;File - Open - 이름과 경로 지정 - Import // Slave 생성&lt;/li&gt; &lt;li&gt;network 맞춰주고...</description>
+        <pubDate>Wed, 03 Jun 2020 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/hadoop/2020/06/03/Hadoop-Multimode.html</link>
+        <guid isPermaLink="true">http://localhost:4000/hadoop/2020/06/03/Hadoop-Multimode.html</guid>
+        
+        
+        <category>Hadoop</category>
+        
+      </item>
+    
+      <item>
+        <title>Hadoop 싱글모드 구축</title>
+        <description>&lt;h2 id=&quot;hadoop-싱글모드-구축&quot;&gt;Hadoop 싱글모드 구축&lt;/h2&gt; &lt;h4 id=&quot;net-tools-vim-ssh-jdk-설치-및-환경변수-설정&quot;&gt;net-tools, vim, ssh, Jdk 설치 및 환경변수 설정&lt;/h4&gt; &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get update&lt;/code&gt;&lt;/p&gt; &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt install net-tools&lt;/code&gt;&lt;/p&gt; &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt-get install vim...</description>
+        <pubDate>Tue, 02 Jun 2020 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/hadoop/2020/06/02/Hadoop-Singlemode.html</link>
+        <guid isPermaLink="true">http://localhost:4000/hadoop/2020/06/02/Hadoop-Singlemode.html</guid>
+        
+        
+        <category>Hadoop</category>
+        
+      </item>
+    
+      <item>
+        <title>설치 전에...</title>
+        <description>&lt;h4 id=&quot;데이터-종류&quot;&gt;데이터 종류&lt;/h4&gt; &lt;ul&gt; &lt;li&gt;정형 데이터 &lt;ul&gt; &lt;li&gt;필드 고정&lt;/li&gt; &lt;li&gt;text 형식의 데이터&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;반정형 데이터 &lt;ul&gt; &lt;li&gt;필드 고정 X&lt;/li&gt; &lt;li&gt;XML, JSON&lt;/li&gt; &lt;/ul&gt; &lt;/li&gt; &lt;li&gt;비정형 데이터 &lt;ul&gt; &lt;li&gt;다양한 데이터(사진, 동영상,...</description>
+        <pubDate>Mon, 01 Jun 2020 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/hadoop/2020/06/01/Before-Install.html</link>
+        <guid isPermaLink="true">http://localhost:4000/hadoop/2020/06/01/Before-Install.html</guid>
+        
+        
+        <category>Hadoop</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many...</description>
+        <pubDate>Mon, 20 Apr 2015 17:43:59 +0900</pubDate>
+        <link>http://localhost:4000/jekyll/2015/04/20/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2015/04/20/welcome-to-jekyll.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>welcome</category>
+        
+        
+        <category>Jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Dummy Post 6</title>
+        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</description>
+        <pubDate>Sun, 19 Apr 2015 17:43:59 +0900</pubDate>
+        <link>http://localhost:4000/dummy/2015/04/19/dummy6.html</link>
+        <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/19/dummy6.html</guid>
+        
+        <category>lorem</category>
+        
+        <category>ipsum</category>
+        
+        
+        <category>Dummy</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many...</description>
+        <pubDate>Sun, 19 Apr 2015 04:25:52 +0900</pubDate>
+        <link>http://localhost:4000/jekyll/2015/04/19/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2015/04/19/welcome-to-jekyll.html</guid>
+        
+        <category>jekyll</category>
+        
+        <category>welcome</category>
+        
+        
+        <category>Jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Dummy Post 6</title>
+        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</description>
+        <pubDate>Sun, 19 Apr 2015 04:25:52 +0900</pubDate>
+        <link>http://localhost:4000/dummy/2015/04/19/dummy6.html</link>
+        <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/19/dummy6.html</guid>
+        
+        <category>lorem</category>
+        
+        <category>ipsum</category>
+        
+        
+        <category>Dummy</category>
+        
+      </item>
+    
+      <item>
+        <title>Dummy Post 5</title>
+        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</description>
+        <pubDate>Sun, 19 Apr 2015 04:25:52 +0900</pubDate>
+        <link>http://localhost:4000/dummy/2015/04/19/dummy5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/19/dummy5.html</guid>
+        
+        <category>lorem</category>
+        
+        
+        <category>Dummy</category>
+        
+      </item>
+    
+      <item>
+        <title>Dummy Post 4</title>
+        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</description>
+        <pubDate>Sun, 19 Apr 2015 04:25:52 +0900</pubDate>
+        <link>http://localhost:4000/dummy/2015/04/19/dummy4.html</link>
+        <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/19/dummy4.html</guid>
+        
+        <category>ipsum</category>
+        
+        
+        <category>Dummy</category>
+        
+      </item>
+    
+  </channel>
+</rss>
