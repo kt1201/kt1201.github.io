@@ -6,45 +6,9 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 16 Feb 2021 16:32:07 +0900</pubDate>
-    <lastBuildDate>Tue, 16 Feb 2021 16:32:07 +0900</lastBuildDate>
+    <pubDate>Tue, 16 Feb 2021 17:02:03 +0900</pubDate>
+    <lastBuildDate>Tue, 16 Feb 2021 17:02:03 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
-    
-      <item>
-        <title>Java로 HTML 태그가 포함된 문자열 치환해주기</title>
-        <description>&lt;h4 id=&quot;java로-html-태그가-포함된-문자열-치환해주기&quot;&gt;Java로 HTML 태그가 포함된 문자열 치환해주기&lt;/h4&gt; &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import org.apache.commons.lang3.StringEscapeUtils; public String escapeHtml(String log) { if (log != null &amp;amp;&amp;amp; log != &quot;&quot;) { log = StringEscapeUtils.escapeHtml4(log);...</description>
-        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/java/2021/02/10/escape-HTML-string-in-Java.html</link>
-        <guid isPermaLink="true">http://localhost:4000/java/2021/02/10/escape-HTML-string-in-Java.html</guid>
-        
-        
-        <category>Java</category>
-        
-      </item>
-    
-      <item>
-        <title>Java로 말줄임</title>
-        <description>&lt;h4 id=&quot;java로-말줄임&quot;&gt;Java로 말줄임&lt;/h4&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ellipsis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stdOut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ellipsisString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span...</description>
-        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/java/2021/02/10/ellipsis.html</link>
-        <guid isPermaLink="true">http://localhost:4000/java/2021/02/10/ellipsis.html</guid>
-        
-        
-        <category>Java</category>
-        
-      </item>
-    
-      <item>
-        <title>String 형식의 Date format 변경</title>
-        <description>&lt;h4 id=&quot;string-형식의-date-format-변경&quot;&gt;String 형식의 Date format 변경&lt;/h4&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.text.SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SimpleDateFormat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transFormat1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span...</description>
-        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/java/2021/02/10/convert-date-format.html</link>
-        <guid isPermaLink="true">http://localhost:4000/java/2021/02/10/convert-date-format.html</guid>
-        
-        
-        <category>Java</category>
-        
-      </item>
     
       <item>
         <title>select 태그의 선택된 value 가져오기</title>
@@ -54,7 +18,7 @@
         <guid isPermaLink="true">http://localhost:4000/jsp/2021/02/10/select-tag-selected-value.html</guid>
         
         
-        <category>JSP</category>
+        <category>jsp</category>
         
       </item>
     
@@ -66,7 +30,7 @@
         <guid isPermaLink="true">http://localhost:4000/jsp/2021/02/10/ajax-serialize().html</guid>
         
         
-        <category>JSP</category>
+        <category>jsp</category>
         
       </item>
     
@@ -78,7 +42,7 @@
         <guid isPermaLink="true">http://localhost:4000/jsp/2021/02/10/a-tag-onclick.html</guid>
         
         
-        <category>JSP</category>
+        <category>jsp</category>
         
       </item>
     
@@ -90,7 +54,43 @@
         <guid isPermaLink="true">http://localhost:4000/jsp/2021/02/10/Is-this-null.html</guid>
         
         
-        <category>JSP</category>
+        <category>jsp</category>
+        
+      </item>
+    
+      <item>
+        <title>Java로 HTML 태그가 포함된 문자열 치환해주기</title>
+        <description>&lt;h4 id=&quot;java로-html-태그가-포함된-문자열-치환해주기&quot;&gt;Java로 HTML 태그가 포함된 문자열 치환해주기&lt;/h4&gt; &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import org.apache.commons.lang3.StringEscapeUtils; public String escapeHtml(String log) { if (log != null &amp;amp;&amp;amp; log != &quot;&quot;) { log = StringEscapeUtils.escapeHtml4(log);...</description>
+        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/java/2021/02/10/escape-HTML-string-in-Java.html</link>
+        <guid isPermaLink="true">http://localhost:4000/java/2021/02/10/escape-HTML-string-in-Java.html</guid>
+        
+        
+        <category>java</category>
+        
+      </item>
+    
+      <item>
+        <title>Java로 말줄임</title>
+        <description>&lt;h4 id=&quot;java로-말줄임&quot;&gt;Java로 말줄임&lt;/h4&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ellipsis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stdOut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ellipsisString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span...</description>
+        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/java/2021/02/10/ellipsis.html</link>
+        <guid isPermaLink="true">http://localhost:4000/java/2021/02/10/ellipsis.html</guid>
+        
+        
+        <category>java</category>
+        
+      </item>
+    
+      <item>
+        <title>String 형식의 Date format 변경</title>
+        <description>&lt;h4 id=&quot;string-형식의-date-format-변경&quot;&gt;String 형식의 Date format 변경&lt;/h4&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.text.SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SimpleDateFormat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transFormat1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span...</description>
+        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/java/2021/02/10/convert-date-format.html</link>
+        <guid isPermaLink="true">http://localhost:4000/java/2021/02/10/convert-date-format.html</guid>
+        
+        
+        <category>java</category>
         
       </item>
     
@@ -102,7 +102,7 @@
         <guid isPermaLink="true">http://localhost:4000/java/2021/01/28/(Spring)-File-upload.html</guid>
         
         
-        <category>Java</category>
+        <category>java</category>
         
       </item>
     
@@ -110,11 +110,11 @@
         <title>(Spring) Missing artifact jdk.tools:jdk.tools:jar:1.x</title>
         <description>&lt;p&gt;maven의 pom.xml에서 &lt;strong&gt;Missing artifact jdk.tools:jdk.tools:jar:1.x&lt;/strong&gt; 에러 발생시 설정&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;원인&lt;/strong&gt; &lt;ul&gt; &lt;li&gt;jre에 JAVA_HOME이 설정되어 tools.jar를 올바르게 가져오지 못함&lt;/li&gt; &lt;li&gt;프로젝트가 잘못된 jdk를 찾음(내 PC에서만 이런 오류가 났음;; 이유는 아직 못찾음)&lt;/li&gt; &lt;/ul&gt;...</description>
         <pubDate>Thu, 21 Jan 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/hadoop/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html</link>
-        <guid isPermaLink="true">http://localhost:4000/hadoop/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html</guid>
+        <link>http://localhost:4000/java/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html</link>
+        <guid isPermaLink="true">http://localhost:4000/java/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html</guid>
         
         
-        <category>Hadoop</category>
+        <category>java</category>
         
       </item>
     
@@ -126,7 +126,7 @@
         <guid isPermaLink="true">http://localhost:4000/java/2021/01/21/(Spring)-Maven-Dynamic-Environment-Configuration.html</guid>
         
         
-        <category>Java</category>
+        <category>java</category>
         
       </item>
     

@@ -155,17 +155,32 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/jsp/2021/02/10/a-tag-onclick.html">a 태그 페이지 이동(onclick)</a>
+      <a class="post-link" href="/java/2021/02/10/ellipsis.html">Java로 말줄임</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>a 태그 페이지 이동(onclick) &lt;ul&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_cntcMthd();"&gt;수집유형&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_system();"&gt;시스템&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_table();" class="active"&gt;테이블&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;script type="text/javascript"&gt; // 수집 유형 버튼 function fn_cntcMthd() { location.href = "/batchResult/cntcMthd"; } // 시스템 버튼 function fn_system() { location.href = "/batchResult/system"; } // 테이블 버튼 function fn_table() { location.href = "/batchResult/table"; } &lt;/script&gt;...</p>
+      <p>Java로 말줄임
+
+public String ellipsis(String stdOut) {
+    String ellipsisString = "...";
+    int length = 8;
+    if(stdOut != null &amp;&amp; stdOut.length()&gt;0){
+        if(stdOut.length()&gt;length){
+            stdOut = stdOut.substring(0, length);
+            stdOut += ellipsisString;
+    	}
+    }
+    return stdOut
+}
+
+
+</p>
     </section>
     <section class="post-meta">
       <div class="post-date">February 10, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/JSP">Jsp</a>
+        <a href="/category/java">Java</a>
         
       
       </div>
@@ -177,23 +192,26 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/jsp/2021/02/10/Is-this-null.html">null 판별 코드</a>
+      <a class="post-link" href="/java/2021/02/10/convert-date-format.html">String 형식의 Date format 변경</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>null 판별 코드
+      <p>String 형식의 Date format 변경
 
-// null 판별
-&lt;script type="text/javascript"&gt;
-    function fn_isEmpty(value){
-        if(value == null || value.length === 0) {
-        	return "-";
-        } else {
-        	return value;
-        }
-    }
-&lt;/script&gt;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+SimpleDateFormat transFormat1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+SimpleDateFormat transFormat1_1 = new SimpleDateFormat("yyyyMMddHHmmss");
+
+String actualBeginDt = "20210210011120"
+
+Date actualBeginDt_date = transFormat1_1.parse(actualBeginDt);
+actualBeginDt = transFormat1.format(actualBeginDt_date);  // "2021-02-10 01:11:20"
 
 
+String -&gt; Date 는 parse(String)
+
+Date -&gt; String 은 format(Date)
 </p>
     </section>
     <section class="post-meta">
@@ -201,7 +219,7 @@
       <div class="post-categories">
       in 
         
-        <a href="/category/JSP">Jsp</a>
+        <a href="/category/java">Java</a>
         
       
       </div>
@@ -223,7 +241,7 @@
       <div class="post-categories">
       in 
         
-        <a href="/category/Java">Java</a>
+        <a href="/category/java">Java</a>
         
       
       </div>
@@ -245,7 +263,7 @@
       <div class="post-categories">
       in 
         
-        <a href="/category/Java">Java</a>
+        <a href="/category/java">Java</a>
         
       
       </div>
@@ -257,7 +275,7 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/hadoop/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html">(Spring) Missing artifact jdk.tools:jdk.tools:jar:1.x</a>
+      <a class="post-link" href="/java/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html">(Spring) Missing artifact jdk.tools:jdk.tools:jar:1.x</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
       <p>maven의 pom.xml에서 Missing artifact jdk.tools:jdk.tools:jar:1.x 에러 발생시 설정 원인 jre에 JAVA_HOME이 설정되어 tools.jar를 올바르게 가져오지 못함 프로젝트가 잘못된 jdk를 찾음(내 PC에서만 이런 오류가 났음;; 이유는 아직 못찾음) 해결방법 방법1. eclipse.ini 파일에 vm 위치추가 -vm C:\Program Files\Java\jdk1.8.0_281\bin\javaw ​ 방법2. 이클립스 Window &gt; Preferences &gt; Java &gt; Installed JREs에서 Installed JREs에 있는...</p>
@@ -267,7 +285,7 @@
       <div class="post-categories">
       in 
         
-        <a href="/category/Hadoop">Hadoop</a>
+        <a href="/category/java">Java</a>
         
       
       </div>

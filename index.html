@@ -155,117 +155,6 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/java/2021/02/10/escape-HTML-string-in-Java.html">Java로 HTML 태그가 포함된 문자열 치환해주기</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>Java로 HTML 태그가 포함된 문자열 치환해주기
-
-import org.apache.commons.lang3.StringEscapeUtils;
-
-public String escapeHtml(String log) {
-    if (log != null &amp;&amp; log != "") {
-        log = StringEscapeUtils.escapeHtml4(log);  // html의 특수문자 치환
-        log = "&lt;pre&gt;" + log + "&lt;/pre&gt;";  // &lt;pre&gt;는 줄바꿈이나 공백 적용한 상태로 보여줌
-    }
-    return log;
-}
-
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">February 10, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/Java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/java/2021/02/10/ellipsis.html">Java로 말줄임</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>Java로 말줄임
-
-public String ellipsis(String stdOut) {
-    String ellipsisString = "...";
-    int length = 8;
-    if(stdOut != null &amp;&amp; stdOut.length()&gt;0){
-        if(stdOut.length()&gt;length){
-            stdOut = stdOut.substring(0, length);
-            stdOut += ellipsisString;
-    	}
-    }
-    return stdOut
-}
-
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">February 10, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/Java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/java/2021/02/10/convert-date-format.html">String 형식의 Date format 변경</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>String 형식의 Date format 변경
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-SimpleDateFormat transFormat1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-SimpleDateFormat transFormat1_1 = new SimpleDateFormat("yyyyMMddHHmmss");
-
-String actualBeginDt = "20210210011120"
-
-Date actualBeginDt_date = transFormat1_1.parse(actualBeginDt);
-actualBeginDt = transFormat1.format(actualBeginDt_date);  // "2021-02-10 01:11:20"
-
-
-String -&gt; Date 는 parse(String)
-
-Date -&gt; String 은 format(Date)
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">February 10, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/Java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
       <a class="post-link" href="/jsp/2021/02/10/select-tag-selected-value.html">select 태그의 선택된 value 가져오기</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
@@ -291,7 +180,7 @@ Date -&gt; String 은 format(Date)
       <div class="post-categories">
       in 
         
-        <a href="/category/JSP">Jsp</a>
+        <a href="/category/jsp">Jsp</a>
         
       
       </div>
@@ -313,7 +202,100 @@ Date -&gt; String 은 format(Date)
       <div class="post-categories">
       in 
         
-        <a href="/category/JSP">Jsp</a>
+        <a href="/category/jsp">Jsp</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/jsp/2021/02/10/a-tag-onclick.html">a 태그 페이지 이동(onclick)</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>a 태그 페이지 이동(onclick) &lt;ul&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_cntcMthd();"&gt;수집유형&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_system();"&gt;시스템&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_table();" class="active"&gt;테이블&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;script type="text/javascript"&gt; // 수집 유형 버튼 function fn_cntcMthd() { location.href = "/batchResult/cntcMthd"; } // 시스템 버튼 function fn_system() { location.href = "/batchResult/system"; } // 테이블 버튼 function fn_table() { location.href = "/batchResult/table"; } &lt;/script&gt;...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">February 10, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/jsp">Jsp</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/jsp/2021/02/10/Is-this-null.html">null 판별 코드</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>null 판별 코드
+
+// null 판별
+&lt;script type="text/javascript"&gt;
+    function fn_isEmpty(value){
+        if(value == null || value.length === 0) {
+        	return "-";
+        } else {
+        	return value;
+        }
+    }
+&lt;/script&gt;
+
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">February 10, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/jsp">Jsp</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/java/2021/02/10/escape-HTML-string-in-Java.html">Java로 HTML 태그가 포함된 문자열 치환해주기</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>Java로 HTML 태그가 포함된 문자열 치환해주기
+
+import org.apache.commons.lang3.StringEscapeUtils;
+
+public String escapeHtml(String log) {
+    if (log != null &amp;&amp; log != "") {
+        log = StringEscapeUtils.escapeHtml4(log);  // html의 특수문자 치환
+        log = "&lt;pre&gt;" + log + "&lt;/pre&gt;";  // &lt;pre&gt;는 줄바꿈이나 공백 적용한 상태로 보여줌
+    }
+    return log;
+}
+
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">February 10, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/java">Java</a>
         
       
       </div>
