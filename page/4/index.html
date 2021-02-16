@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>코  드  저  장  소 - page 2</title>
+  <title>코  드  저  장  소 - page 4</title>
   <meta name="description" content="김기태의 블로그입니다.
 ">
   
@@ -44,9 +44,9 @@
   <!-- Facebook OGP cards -->
   <meta property="og:description" content="김기태의 블로그입니다.
 " />
-  <meta property="og:url" content="http://localhost:4000/page/2/index.html">
+  <meta property="og:url" content="http://localhost:4000/page/4/index.html">
   <meta property="og:site_name" content="코  드  저  장  소" />
-  <meta property="og:title" content="코  드  저  장  소 - page 2" />
+  <meta property="og:title" content="코  드  저  장  소 - page 4" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -57,18 +57,18 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="코  드  저  장  소 - page 2">
+  <meta name="twitter:title" content="코  드  저  장  소 - page 4">
   <meta name="twitter:description" content="김기태의 블로그입니다.
 ">
   <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/page/2/index.html">
+  <meta name="twitter:url" content="http://localhost:4000/page/4/index.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/page/2/">
+  <link rel="canonical" href="http://localhost:4000/page/4/">
 	<link rel="alternate" type="application/rss+xml" title="코  드  저  장  소" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
@@ -155,49 +155,36 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/jsp/2021/02/10/a-tag-onclick.html">a 태그 페이지 이동(onclick)</a>
+      <a class="post-link" href="/jsp/2021/01/04/Input-Webpage-in-Webpage.html">웹페이지 안에 웹페이지 넣기</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>a 태그 페이지 이동(onclick) &lt;ul&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_cntcMthd();"&gt;수집유형&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_system();"&gt;시스템&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_table();" class="active"&gt;테이블&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;script type="text/javascript"&gt; // 수집 유형 버튼 function fn_cntcMthd() { location.href = "/batchResult/cntcMthd"; } // 시스템 버튼 function fn_system() { location.href = "/batchResult/system"; } // 테이블 버튼 function fn_table() { location.href = "/batchResult/table"; } &lt;/script&gt;...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">February 10, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/JSP">Jsp</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/jsp/2021/02/10/Is-this-null.html">null 판별 코드</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>null 판별 코드
+      <p>include 사용
 
-// null 판별
-&lt;script type="text/javascript"&gt;
-    function fn_isEmpty(value){
-        if(value == null || value.length === 0) {
-        	return "-";
-        } else {
-        	return value;
-        }
-    }
-&lt;/script&gt;
+&lt;div style="width: 500px; height: 400px;"&gt;
+    &lt;%@ include file="/WEB-INF/jsp/analysis/test.html" %&gt;
+&lt;/div&gt;
+
+
+iframe 사용
+
+iframe의 src에 html의 실제 경로를 넣으면 chrome에서
+
+“not allowed to load local resource” 라는 에러가 뜬다.
+
+이때는, 톰캣의 server.xml의 Host태그 안에 다음 코드를 추가한다.
+
+&lt;Context path="/filepath" reloadable="true" docBase="C:\Users\user\git\kcgsb\sb-portal-dev\src\main\webapp\WEB-INF\jsp"/&gt;
+
+
+아래는 JSP 코드
+
+&lt;iframe src="/filepath/analysis/test.html" width=500 height=500&gt;&lt;/iframe&gt;
 
 
 </p>
     </section>
     <section class="post-meta">
-      <div class="post-date">February 10, 2021</div>
+      <div class="post-date">January 4, 2021</div>
       <div class="post-categories">
       in 
         
@@ -213,13 +200,35 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/java/2021/01/28/(Spring)-File-upload.html">(Spring) 파일 업로드</a>
+      <a class="post-link" href="/database/2020/12/24/(Postgres)-Import-CSV.html">(Postgres) CSV파일 DB에 Import</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>우선 화면에서 form 태그를 생성하는데, 여기서 중요한건 2가지가 있다. &lt;form name="detailForm" method="post" enctype="multipart/form-data"&gt; &lt;input type="file" multiple="multiple" name="file" class="ct_input_g"&gt; ... &lt;/form&gt; form 태그의 { enctype=”multipart/form-data” } -&gt; 파일 업로드 기능을 사용할 수 있게 한다. input 태그의 { type=”file”, multiple=”multiple” } -&gt; 파일 다중업로드가 가능하도록 한다. 이렇게 파일을 올렸다면, Controller 에서 인자로...</p>
+      <p>Postgres에서 CSV파일을 import 시킬때 명령어는 COPY 테이블명 FROM 'csv파일 경로' WITH DELIMITER ',' csv header; 근데 로컬에서 바탕화면에 csv파일 저장하고 쿼리문 실행했더니 Permission denied가 나온다. 그럴 때는 C:\Program Files\PostgreSQL\12\scripts\table.csv 저 위치에 csv파일 넣고 실행시키면 된다.(관리자 권한 필요) (psql에서는 copy 명령어에 대한 권한을 user에게 부여해야 한다.) 리눅스에서는 psql -h 10.188.171.214 -U...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">January 28, 2021</div>
+      <div class="post-date">December 24, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/Database">Database</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/java/2020/12/22/HttpsURLConnection-headers.html">HttpsURLConnection의 headers값 가져오기</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>전에 올렸던 서버단에서 URL로 파일 다운로드받는 코드에서 추가해야할 부분이 생겼다. URL을 요청하면 headers값이 같이 온다. 기존에는 원래 header값들을 무시하고 새로 header를 만들었는데 처음 data.go.kr에서 받아오는 response header의 Content_TYPE과 CONTENT_DISPOSITION이 필요해서 가져와야 하는 경우가 생겼다 try { URL obj = new URL(dataurl); HttpsURLConnection con = (HttpsURLConnection) obj.openConnection(); // 해당 url 연결...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">December 22, 2020</div>
       <div class="post-categories">
       in 
         
@@ -235,13 +244,13 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/java/2021/01/21/(Spring)-Maven-Dynamic-Environment-Configuration.html">(Spring)  Maven 동적 환경구성</a>
+      <a class="post-link" href="/java/2020/12/16/JDBC-Hive-Connect.html">JDBC - Hive 연결(직접 연결)</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>Maven Properties pom.xml 파일에서 maven 프로퍼티를 사용하여 동적인 환경 구성이 가능하다. 프로퍼티에는 아래 5가지 종류가 있다. 1. Maven Project Properties Maven Project Object Model(pom.xml) 에 정의된 값. prefix. : project.* ﻿ex) ${project.build.outputDirectory} &lt;dependency&gt; &lt;groupId&gt;${project.groupId}&lt;/groupId&gt; &lt;artifactId&gt;project&lt;/artifactId&gt; &lt;version&gt;${project.version}&lt;/version&gt; &lt;/dependency&gt; 2. Maven Settings Properties ~/.m2/settings.xml 에 정의된 값 사용 prefix : settings.* 3....</p>
+      <p>JDBC로 Hive 연결하여 쿼리문 날려서 map 형태로 return 먼저 의존성 당시 사용하던건 클라우데라꺼 였는데 의존성은 클라우데라의 의존성을 쓰지 않아도 driver를 잘 찾았다. (클라우데라의 jar파일을 수동으로 넣었는데 driver를 못찾음;; 왜지??) 버전은 각 환경에 맞는 버전으로 설정 &lt;dependency&gt; &lt;groupId&gt;org.apache.hive&lt;/groupId&gt; &lt;artifactId&gt;hive-exec&lt;/artifactId&gt; &lt;version&gt;2.3.7&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.hive&lt;/groupId&gt; &lt;artifactId&gt;hive-jdbc&lt;/artifactId&gt; &lt;version&gt;2.3.7&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.thrift&lt;/groupId&gt; &lt;artifactId&gt;libthrift&lt;/artifactId&gt; &lt;version&gt;0.9.3&lt;/version&gt; &lt;/dependency&gt;...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">January 21, 2021</div>
+      <div class="post-date">December 16, 2020</div>
       <div class="post-categories">
       in 
         
@@ -257,13 +266,13 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/hadoop/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html">(Spring) Missing artifact jdk.tools:jdk.tools:jar:1.x</a>
+      <a class="post-link" href="/hadoop/2020/06/04/WordCount.html">WordCount 코딩 및 실행</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>maven의 pom.xml에서 Missing artifact jdk.tools:jdk.tools:jar:1.x 에러 발생시 설정 원인 jre에 JAVA_HOME이 설정되어 tools.jar를 올바르게 가져오지 못함 프로젝트가 잘못된 jdk를 찾음(내 PC에서만 이런 오류가 났음;; 이유는 아직 못찾음) 해결방법 방법1. eclipse.ini 파일에 vm 위치추가 -vm C:\Program Files\Java\jdk1.8.0_281\bin\javaw ​ 방법2. 이클립스 Window &gt; Preferences &gt; Java &gt; Installed JREs에서 Installed JREs에 있는...</p>
+      <p>WordCount 코딩 및 실행 eclipse java project 생성 (name : WordCount) 프로젝트 protperties - Java Build Path - Libraries - Add External JARs…. hadoop API 3가지 추가 /usr/local/hadoop/share/hadoop/common/hadoop-common-2.9.2.jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.2.jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.9.2.jar 코딩 …. (WordCount 프로젝트 참고) jar 파일 생성 filezilla로 /home/manager 에 jar 파일 업로드 WordCount Test // 기존 파일 삭제하고...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">January 21, 2021</div>
+      <div class="post-date">June 4, 2020</div>
       <div class="post-categories">
       in 
         
@@ -280,16 +289,16 @@
 <nav class="pagination" role="navigation">
 	<p>
     
-		<a class="newer-posts" href="/">
+		<a class="newer-posts" href="/page/3/">
 			<span class="fa-stack fa-lg">
 				<i class="fa fa-square fa-stack-2x"></i>
 				<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
 			</span>
 		</a>
 	
-	<span class="page-number">Page 2 of 5</span>
+	<span class="page-number">Page 4 of 5</span>
 	
-		<a class="newer-posts" href="/page/3/">
+		<a class="newer-posts" href="/page/5/">
 			<span class="fa-stack fa-lg">
 				<i class="fa fa-square fa-stack-2x"></i>
 				<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>

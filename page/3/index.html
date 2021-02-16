@@ -129,6 +129,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -153,17 +155,17 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/dummy/2015/04/19/dummy3.html">Dummy Post 3</a>
+      <a class="post-link" href="/linux/2021/01/06/command-Is_Success.html">명령어 성공 여부</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>This is just a dummy post. Lorem ipsum and all the rest. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute...</p>
+      <p>명령어를 실행하면 그에 따른 return이 $?에 저장이 된다. 0 이 리턴되면 정상, 0이 리턴되지 않으면 오류로 간주 쉘스크립트로 만들면 아래와 같다. #!/bin/sh ls /etc | grep hosts if [ $? -eq 0 ];then echo "CMD OK!" else echo "CMD Failure!" exit(9) fi 그런데 더 간단하게 보이는 방법으로서 명령을 실행하고 나서...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">April 19, 2015</div>
+      <div class="post-date">January 6, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/Dummy">Dummy</a>
+        <a href="/category/Linux">Linux</a>
         
       
       </div>
@@ -175,17 +177,28 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/dummy/2015/04/19/dummy2.html">Dummy Post 2</a>
+      <a class="post-link" href="/python/2021/01/06/Site-Packages-Path.html">site-packages 경로</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>This is just a dummy post. Lorem ipsum and all the rest. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute...</p>
+      <p>pip으로 패키지를 다운받을수 없는 경우 수동으로 패키지를 넣어줘야 할때를 대비해 기록
+
+* Linux
+
+/usr/lib/python3.6/site-packages
+
+(다음 경로에 대한 write 권한 필요)
+
+* Windows
+
+C:\Users\user\AppData\Local\Programs\Python\Python37\Lib\site-packages
+</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">April 19, 2015</div>
+      <div class="post-date">January 6, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/Dummy">Dummy</a>
+        <a href="/category/Python">Python</a>
         
       
       </div>
@@ -197,17 +210,78 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/dummy/2015/04/19/dummy.html">Dummy Post</a>
+      <a class="post-link" href="/java/2021/01/06/(Spring)-Make-Query-by-Dynamic-Parameter-in-Mybatis.html">(Spring) Mybatis 동적 컬럼 및 동적 테이블 parameter로 받아 쿼리문 생성할 때</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>This is just a dummy post. Lorem ipsum and all the rest. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute...</p>
+      <p>${param} 은 ‘’ 안붙이고 쿼리문 생성
+
+#{param} 은 ‘’ 붙이고 쿼리문 생성
+
+예시
+
+SELECT ${Column1}
+FROM ${Db1}.${Table1}
+WHERE Column1 = #{Param1}
+
+
+–&gt; 다음과 같이 쿼리문 생성 –&gt;
+
+SELECT Column1
+FROM Db1.Table1
+WHERE Column1 = 'Param1'
+
+</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">April 19, 2015</div>
+      <div class="post-date">January 6, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/Dummy">Dummy</a>
+        <a href="/category/Java">Java</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/java/2021/01/05/(Spring)-Connection-Timeout-Error.html">(Spring) 일정 시간 지나면 Connection Pool 연결 끊어짐(connection time out error)</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>문제 - 마지막으로 DB에 connection을 맺은 후 일정시간 사용이 없다보니 DB connection이 끊겼다. 원인 - connection이 연결된 이후 해당 connection이 close 없이 DBMS의 설정에 따른 일정 시간이 지나면 해당 connection을 종료시키게 된다. (ex. Mysql은 8시간 request가 오지 않으면 강제적으로 connection을 닫아버린다. Mysql의 설정을 변경함으로써 값을 바꿀 수는 있지만, 좋은 방법은...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">January 5, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/Java">Java</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/java/2021/01/05/(Spring)-Multi-Datasource.html">(Spring) 다중 datasource 설정</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>다중 datasource 설정을 해보자 연결할 DB는 postgresql과 hive다 context-datasource.xml 설정 각 bean의 id를 다르게 해주어야 한다. hive연결에서는 dbcp 연결하니깐 인증에러가 떠서 jdbc 연결로 바꿨다. hive연결의 dependency 설정은 다음 링크 참고 JDBC-Hive 연결(직접 연결) - https://blog.naver.com/ktkim121/222175703310 &lt;!-- postgresql --&gt; &lt;bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"&gt; &lt;property name="driverClassName" value="org.postgresql.Driver" /&gt; &lt;property name="url" value="jdbc:postgresql://localhost:5432/postgres" /&gt;...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">January 5, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/Java">Java</a>
         
       
       </div>
@@ -227,12 +301,14 @@
 			</span>
 		</a>
 	
-	<span class="page-number">Page 3 of 3</span>
+	<span class="page-number">Page 3 of 5</span>
 	
-		<span class="fa-stack fa-lg">
-			<i class="fa fa-square fa-stack-2x"></i>
-			<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-		</span>
+		<a class="newer-posts" href="/page/4/">
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+			</span>
+		</a>
 	
 	</p>
 </nav>
@@ -263,6 +339,8 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	

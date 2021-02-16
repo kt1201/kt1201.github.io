@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>설치 전에...</title>
-  <meta name="description" content="데이터 종류">
+  <title>(Spring) Missing artifact jdk.tools:jdk.tools:jar:1.x</title>
+  <meta name="description" content="maven의 pom.xml에서 Missing artifact jdk.tools:jdk.tools:jar:1.x 에러 발생시 설정">
   
   <meta name="author" content="kt1201">
   <meta name="copyright" content="&copy; kt1201 2021">
@@ -41,10 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="데이터 종류" />
-  <meta property="og:url" content="http://localhost:4000/hadoop/2020/06/01/Before-Install.html">
+  <meta property="og:description" content="maven의 pom.xml에서 Missing artifact jdk.tools:jdk.tools:jar:1.x 에러 발생시 설정" />
+  <meta property="og:url" content="http://localhost:4000/hadoop/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html">
   <meta property="og:site_name" content="코  드  저  장  소" />
-  <meta property="og:title" content="설치 전에..." />
+  <meta property="og:title" content="(Spring) Missing artifact jdk.tools:jdk.tools:jar:1.x" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -55,17 +55,17 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="설치 전에...">
-  <meta name="twitter:description" content="데이터 종류">
+  <meta name="twitter:title" content="(Spring) Missing artifact jdk.tools:jdk.tools:jar:1.x">
+  <meta name="twitter:description" content="maven의 pom.xml에서 Missing artifact jdk.tools:jdk.tools:jar:1.x 에러 발생시 설정">
   <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/hadoop/2020/06/01/Before-Install.html">
+  <meta name="twitter:url" content="http://localhost:4000/hadoop/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/hadoop/2020/06/01/Before-Install.html">
+  <link rel="canonical" href="http://localhost:4000/hadoop/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html">
 	<link rel="alternate" type="application/rss+xml" title="코  드  저  장  소" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
@@ -141,7 +141,7 @@
 <div class="post-header-container " >
   <div class="scrim ">
     <header class="post-header">
-      <h1 class="title">설치 전에...</h1>
+      <h1 class="title">(Spring) Missing artifact jdk.tools:jdk.tools:jar:1.x</h1>
       <p class="info">by <strong>kt1201</strong></p>
     </header>
   </div>
@@ -156,7 +156,7 @@
  
 
 <section class="post-meta">
-  <div class="post-date">June 1, 2020</div>
+  <div class="post-date">January 21, 2021</div>
   <div class="post-categories">
   in 
     
@@ -167,120 +167,40 @@
 </section>
 
 <article class="post-content">
-  <h4 id="데이터-종류">데이터 종류</h4>
+  <p>maven의 pom.xml에서 <strong>Missing artifact jdk.tools:jdk.tools:jar:1.x</strong> 에러 발생시 설정</p>
 
 <ul>
-  <li>정형 데이터
+  <li><strong>원인</strong>
     <ul>
-      <li>필드 고정</li>
-      <li>text 형식의 데이터</li>
-    </ul>
-  </li>
-  <li>반정형 데이터
-    <ul>
-      <li>필드 고정 X</li>
-      <li>XML, JSON</li>
-    </ul>
-  </li>
-  <li>비정형 데이터
-    <ul>
-      <li>다양한 데이터(사진, 동영상, 메신저, 위치정보)</li>
-    </ul>
-  </li>
-</ul>
-
-<h4 id="sql-vs-nosql">SQL vs NoSQL</h4>
-
-<ul>
-  <li>SQL
-    <ul>
-      <li>기존의 RDBMS</li>
-      <li>mysql, oracle …</li>
-    </ul>
-  </li>
-  <li>NoSQL
-    <ul>
-      <li>비정형데이터를 처리하기 위한 기술</li>
-      <li>관계보다는 키와 값으로 단순 처리</li>
-      <li>조인 X, 샤딩 활용</li>
-      <li>mongoDB, Hbase, aws DynamoDB</li>
-    </ul>
-  </li>
-</ul>
-
-<h4 id="데이터-저장-기법">데이터 저장 기법</h4>
-
-<ul>
-  <li>DAS(Direct Attached Storage)
-    <ul>
-      <li>서버에 직접 저장장치 추가</li>
-      <li>속도 good, 연결 한계</li>
-    </ul>
-  </li>
-  <li>NAS(Network Attached Storage)
-    <ul>
-      <li>네트워크를 통해 연결</li>
-      <li>확장성과 유연성 좋음, but 속도 별로</li>
-    </ul>
-  </li>
-  <li>SAM(Storage-Area Network)
-    <ul>
-      <li>광케이블로 고속처리 가능(Fiber Channel Switch)</li>
-    </ul>
-  </li>
-</ul>
-
-<h4 id="sharding">Sharding</h4>
-
-<ul>
-  <li>RDB에서 대량의 데이터를 처리하기 위해 데이터를 파티셔닝 하는 기술</li>
-  <li>ex) 15만명의 회원 데이터를 성씨로 파티셔닝</li>
-</ul>
-
-<h4 id="ssh-vs-telnet">SSH vs Telnet</h4>
-
-<ul>
-  <li>보안통신 / 평문기반 통신</li>
-</ul>
-
-<hr />
-
-<h2 id="설치-전에">설치 전에…</h2>
-
-<h4 id="설치-목록">설치 목록</h4>
-
-<ul>
-  <li>VMware (virtual machine)</li>
-  <li>Xshell (SSH 접속)</li>
-  <li>우분투 (Linux)</li>
-</ul>
-
-<h4 id="ip-관련-설정">IP 관련 설정</h4>
-
-<ul>
-  <li>
-    <p>VMware-edit-virtual network edit : 전체 ip 대역 잡아줘서 내, 외부로 통신 가능케 함 (192.168.100.0)</p>
-
-    <ul>
-      <li>
-        <p>1은 컴퓨터, 2는 VM</p>
-      </li>
-      <li>
-        <p>사용 가능한건 3~254까지</p>
-      </li>
+      <li>jre에 JAVA_HOME이 설정되어 tools.jar를 올바르게 가져오지 못함</li>
+      <li>프로젝트가 잘못된 jdk를 찾음(내 PC에서만 이런 오류가 났음;; 이유는 아직 못찾음)</li>
     </ul>
   </li>
   <li>
-    <p>ubuntu : 각 서버한테 IP 주소를 줌 (192.168.100.10, …)</p>
+    <p><strong>해결방법</strong></p>
+
+    <p><strong>방법1.</strong> eclipse.ini 파일에 vm 위치추가</p>
   </li>
 </ul>
 
-<h4 id="vm-종료-시">VM 종료 시</h4>
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">-vm</span>
+<span class="err">C:\Program</span> <span class="err">Files\Java\jdk1.8.0_281\bin\javaw</span>
+</code></pre></div></div>
 
-<ul>
-  <li>Master 우클릭 - Power - Shut Down Guest</li>
-  <li>절대 그냥 닫아버리지 않기 (본체의 코드를 그냥 뽑아버리는 것과 동일)</li>
-</ul>
+<p>​	<strong>방법2.</strong> 이클립스 Window &gt; Preferences &gt; Java &gt; Installed JREs에서 Installed JREs에 있는 항목에 jdk 경로가 올바르게 되어있는지 확인하고, 틀리게 되어있다면 jdk 경로를 지정</p>
+
+<p>​	<strong>방법3.</strong> pom.xml에 의존성 추가</p>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;dependency&gt;</span>
+    <span class="nt">&lt;groupId&gt;</span>jdk.tools<span class="nt">&lt;/groupId&gt;</span>
+	<span class="nt">&lt;artifactId&gt;</span>jdk.tools<span class="nt">&lt;/artifactId&gt;</span>
+	<span class="nt">&lt;version&gt;</span>1.8.0_281<span class="nt">&lt;/version&gt;</span>
+	<span class="nt">&lt;scope&gt;</span>system<span class="nt">&lt;/scope&gt;</span>
+	<span class="nt">&lt;systemPath&gt;</span>${env.JAVA_HOME}/lib/tools.jar<span class="nt">&lt;/systemPath&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></div>
+
+<p>내경우는 방법1,2를 시도해도 해결이 안되서 방법3을 썼다.</p>
 
 </article>
 
@@ -292,11 +212,19 @@
 <section class="post-navigation">
 	<span class="prev-post">
 		
+			<a href="/java/2021/01/21/(Spring)-Maven-Dynamic-Environment-Configuration.html">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+				</span>
+				<span class="page-number">(Spring)  Maven 동적 환경구성</span>
+			</a>
+		
 	</span>
 	<span class="next-post">
 		
-			<a href="/hadoop/2020/06/02/Hadoop-Singlemode.html">
-				<span class="page-number">Hadoop 싱글모드 구축</span>
+			<a href="/java/2021/01/28/(Spring)-File-upload.html">
+				<span class="page-number">(Spring) 파일 업로드</span>
 				<span class="fa-stack fa-lg">
 					<i class="fa fa-square fa-stack-2x"></i>
 					<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>

@@ -129,6 +129,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -153,17 +155,30 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/hadoop/2020/06/04/WordCount.html">WordCount 코딩 및 실행</a>
+      <a class="post-link" href="/java/2021/02/10/escape-HTML-string-in-Java.html">Java로 HTML 태그가 포함된 문자열 치환해주기</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>WordCount 코딩 및 실행 eclipse java project 생성 (name : WordCount) 프로젝트 protperties - Java Build Path - Libraries - Add External JARs…. hadoop API 3가지 추가 /usr/local/hadoop/share/hadoop/common/hadoop-common-2.9.2.jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.2.jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.9.2.jar 코딩 …. (WordCount 프로젝트 참고) jar 파일 생성 filezilla로 /home/manager 에 jar 파일 업로드 WordCount Test // 기존 파일 삭제하고...</p>
+      <p>Java로 HTML 태그가 포함된 문자열 치환해주기
+
+import org.apache.commons.lang3.StringEscapeUtils;
+
+public String escapeHtml(String log) {
+    if (log != null &amp;&amp; log != "") {
+        log = StringEscapeUtils.escapeHtml4(log);  // html의 특수문자 치환
+        log = "&lt;pre&gt;" + log + "&lt;/pre&gt;";  // &lt;pre&gt;는 줄바꿈이나 공백 적용한 상태로 보여줌
+    }
+    return log;
+}
+
+
+</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">June 4, 2020</div>
+      <div class="post-date">February 10, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/Hadoop">Hadoop</a>
+        <a href="/category/Java">Java</a>
         
       
       </div>
@@ -175,17 +190,32 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/hadoop/2020/06/03/Hadoop-Multimode.html">Hadoop 멀티모드 구축</a>
+      <a class="post-link" href="/java/2021/02/10/ellipsis.html">Java로 말줄임</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>Hadoop 멀티모드 구축 Slave 생성 File - Export to OVF… // Master 배포 File - Open - 이름과 경로 지정 - Import // Slave 생성 network 맞춰주고 Take snapshot slave들은 Memory 1GB로 변경 (자신의 컴퓨터 성능에 따라 선택) 각 서버 계정 명 변경 sudo vim /etc/hostname dd(삭제) 후 각 이름...</p>
+      <p>Java로 말줄임
+
+public String ellipsis(String stdOut) {
+    String ellipsisString = "...";
+    int length = 8;
+    if(stdOut != null &amp;&amp; stdOut.length()&gt;0){
+        if(stdOut.length()&gt;length){
+            stdOut = stdOut.substring(0, length);
+            stdOut += ellipsisString;
+    	}
+    }
+    return stdOut
+}
+
+
+</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">June 3, 2020</div>
+      <div class="post-date">February 10, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/Hadoop">Hadoop</a>
+        <a href="/category/Java">Java</a>
         
       
       </div>
@@ -197,17 +227,34 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/hadoop/2020/06/02/Hadoop-Singlemode.html">Hadoop 싱글모드 구축</a>
+      <a class="post-link" href="/java/2021/02/10/convert-date-format.html">String 형식의 Date format 변경</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>Hadoop 싱글모드 구축 net-tools, vim, ssh, Jdk 설치 및 환경변수 설정 sudo apt-get update sudo apt install net-tools sudo apt-get install vim -y sudo apt-get install ssh -y ifconfig // net-tools 확인 vim // vim 확인 sudo /etc/init.d/ssh start // ssh 확인 sudo apt-get install default-jdk -y // jdk 설치...</p>
+      <p>String 형식의 Date format 변경
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+SimpleDateFormat transFormat1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+SimpleDateFormat transFormat1_1 = new SimpleDateFormat("yyyyMMddHHmmss");
+
+String actualBeginDt = "20210210011120"
+
+Date actualBeginDt_date = transFormat1_1.parse(actualBeginDt);
+actualBeginDt = transFormat1.format(actualBeginDt_date);  // "2021-02-10 01:11:20"
+
+
+String -&gt; Date 는 parse(String)
+
+Date -&gt; String 은 format(Date)
+</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">June 2, 2020</div>
+      <div class="post-date">February 10, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/Hadoop">Hadoop</a>
+        <a href="/category/Java">Java</a>
         
       
       </div>
@@ -219,17 +266,32 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/hadoop/2020/06/01/Before-Install.html">설치 전에...</a>
+      <a class="post-link" href="/jsp/2021/02/10/select-tag-selected-value.html">select 태그의 선택된 value 가져오기</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>데이터 종류 정형 데이터 필드 고정 text 형식의 데이터 반정형 데이터 필드 고정 X XML, JSON 비정형 데이터 다양한 데이터(사진, 동영상, 메신저, 위치정보) SQL vs NoSQL SQL 기존의 RDBMS mysql, oracle … NoSQL 비정형데이터를 처리하기 위한 기술 관계보다는 키와 값으로 단순 처리 조인 X, 샤딩 활용 mongoDB, Hbase, aws DynamoDB...</p>
+      <p>select 태그의 선택된 value 가져오기
+
+&lt;div class="selectChoice"&gt;
+    &lt;select name="status" id="status" onchange="fn_searchExt()"&gt;
+        &lt;option value=""&gt;전체&lt;/option&gt;
+        &lt;option value="SUCCESS"&gt;Success&lt;/option&gt;
+        &lt;option value="FAILURE" selected&gt;Failure&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+    var batchstatus = document.getElementById("status").options[document.getElementById("status").selectedIndex].value;
+&lt;/script&gt;
+
+
+</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">June 1, 2020</div>
+      <div class="post-date">February 10, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/Hadoop">Hadoop</a>
+        <a href="/category/JSP">Jsp</a>
         
       
       </div>
@@ -241,17 +303,17 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/jekyll/2015/04/20/welcome-to-jekyll.html">Welcome to Jekyll!</a>
+      <a class="post-link" href="/jsp/2021/02/10/ajax-serialize().html">serialize()를 이용한 ajax Form 데이터 전송하기</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...</p>
+      <p>serialize()를 이용한 ajax Form 데이터 전송하기 &lt;form id="searchFrm"&gt; &lt;div class="inline bg_gray dateSearch"&gt; &lt;span class="dateIcon"&gt; &lt;input type="text" name="startDate" id="startDate" placeholder="Start date" aria-label="First name" class="date start-date" readonly="readonly"&gt; &lt;i class="datepicker" target="fromDt"&gt;&lt;/i&gt; &lt;/span&gt; &lt;span class="wave"&gt;~&lt;/span&gt; &lt;span class="dateIcon"&gt; &lt;input type="text" name="endDate" id="endDate" placeholder="End date" aria-label="Last name" class="date end-date" readonly="readonly"&gt; &lt;i class="datepicker" target="toDt"&gt;&lt;/i&gt; &lt;/span&gt; &lt;input type="text"...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">April 20, 2015</div>
+      <div class="post-date">February 10, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/Jekyll">Jekyll</a>
+        <a href="/category/JSP">Jsp</a>
         
       
       </div>
@@ -269,7 +331,7 @@
 			<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
 		</span>
 	
-	<span class="page-number">Page 1 of 3</span>
+	<span class="page-number">Page 1 of 5</span>
 	
 		<a class="newer-posts" href="/page/2/">
 			<span class="fa-stack fa-lg">
@@ -307,6 +369,8 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	
