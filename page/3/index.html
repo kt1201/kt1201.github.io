@@ -131,6 +131,12 @@
 
 	
 
+	
+
+	
+
+	
+
 
       </ul>
     </nav>
@@ -155,28 +161,17 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/python/2021/01/06/Site-Packages-Path.html">site-packages 경로</a>
+      <a class="post-link" href="/java/2021/01/28/(Spring)-File-upload.html">(Spring) 파일 업로드</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>pip으로 패키지를 다운받을수 없는 경우 수동으로 패키지를 넣어줘야 할때를 대비해 기록
-
-* Linux
-
-/usr/lib/python3.6/site-packages
-
-(다음 경로에 대한 write 권한 필요)
-
-* Windows
-
-C:\Users\user\AppData\Local\Programs\Python\Python37\Lib\site-packages
-</p>
+      <p>우선 화면에서 form 태그를 생성하는데, 여기서 중요한건 2가지가 있다. &lt;form name="detailForm" method="post" enctype="multipart/form-data"&gt; &lt;input type="file" multiple="multiple" name="file" class="ct_input_g"&gt; ... &lt;/form&gt; form 태그의 { enctype=”multipart/form-data” } -&gt; 파일 업로드 기능을 사용할 수 있게 한다. input 태그의 { type=”file”, multiple=”multiple” } -&gt; 파일 다중업로드가 가능하도록 한다. 이렇게 파일을 올렸다면, Controller 에서 인자로...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">January 6, 2021</div>
+      <div class="post-date">January 28, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/python">Python</a>
+        <a href="/category/java">Java</a>
         
       
       </div>
@@ -188,17 +183,39 @@ C:\Users\user\AppData\Local\Programs\Python\Python37\Lib\site-packages
   
   <li>
     <h2>
-      <a class="post-link" href="/linux/2021/01/06/command-Is_Success.html">명령어 성공 여부</a>
+      <a class="post-link" href="/java/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html">(Spring) Missing artifact jdk.tools:jdk.tools:jar:1.x</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>명령어를 실행하면 그에 따른 return이 $?에 저장이 된다. 0 이 리턴되면 정상, 0이 리턴되지 않으면 오류로 간주 쉘스크립트로 만들면 아래와 같다. #!/bin/sh ls /etc | grep hosts if [ $? -eq 0 ];then echo "CMD OK!" else echo "CMD Failure!" exit(9) fi 그런데 더 간단하게 보이는 방법으로서 명령을 실행하고 나서...</p>
+      <p>maven의 pom.xml에서 Missing artifact jdk.tools:jdk.tools:jar:1.x 에러 발생시 설정 원인 jre에 JAVA_HOME이 설정되어 tools.jar를 올바르게 가져오지 못함 프로젝트가 잘못된 jdk를 찾음(내 PC에서만 이런 오류가 났음;; 이유는 아직 못찾음) 해결방법 방법1. eclipse.ini 파일에 vm 위치추가 -vm C:\Program Files\Java\jdk1.8.0_281\bin\javaw ​ 방법2. 이클립스 Window &gt; Preferences &gt; Java &gt; Installed JREs에서 Installed JREs에 있는...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">January 6, 2021</div>
+      <div class="post-date">January 21, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/linux">Linux</a>
+        <a href="/category/java">Java</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/java/2021/01/21/(Spring)-Maven-Dynamic-Environment-Configuration.html">(Spring)  Maven 동적 환경구성</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>Maven Properties pom.xml 파일에서 maven 프로퍼티를 사용하여 동적인 환경 구성이 가능하다. 프로퍼티에는 아래 5가지 종류가 있다. 1. Maven Project Properties Maven Project Object Model(pom.xml) 에 정의된 값. prefix. : project.* ﻿ex) ${project.build.outputDirectory} &lt;dependency&gt; &lt;groupId&gt;${project.groupId}&lt;/groupId&gt; &lt;artifactId&gt;project&lt;/artifactId&gt; &lt;version&gt;${project.version}&lt;/version&gt; &lt;/dependency&gt; 2. Maven Settings Properties ~/.m2/settings.xml 에 정의된 값 사용 prefix : settings.* 3....</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">January 21, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/java">Java</a>
         
       
       </div>
@@ -249,39 +266,28 @@ WHERE Column1 = 'Param1'
   
   <li>
     <h2>
-      <a class="post-link" href="/java/2021/01/05/(Spring)-Connection-Timeout-Error.html">(Spring) 일정 시간 지나면 Connection Pool 연결 끊어짐(connection time out error)</a>
+      <a class="post-link" href="/python/2021/01/06/Site-Packages-Path.html">site-packages 경로</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>문제 - 마지막으로 DB에 connection을 맺은 후 일정시간 사용이 없다보니 DB connection이 끊겼다. 원인 - connection이 연결된 이후 해당 connection이 close 없이 DBMS의 설정에 따른 일정 시간이 지나면 해당 connection을 종료시키게 된다. (ex. Mysql은 8시간 request가 오지 않으면 강제적으로 connection을 닫아버린다. Mysql의 설정을 변경함으로써 값을 바꿀 수는 있지만, 좋은 방법은...</p>
+      <p>pip으로 패키지를 다운받을수 없는 경우 수동으로 패키지를 넣어줘야 할때를 대비해 기록
+
+* Linux
+
+/usr/lib/python3.6/site-packages
+
+(다음 경로에 대한 write 권한 필요)
+
+* Windows
+
+C:\Users\user\AppData\Local\Programs\Python\Python37\Lib\site-packages
+</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">January 5, 2021</div>
+      <div class="post-date">January 6, 2021</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/java/2021/01/05/(Spring)-Multi-Datasource.html">(Spring) 다중 datasource 설정</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>다중 datasource 설정을 해보자 연결할 DB는 postgresql과 hive다 context-datasource.xml 설정 각 bean의 id를 다르게 해주어야 한다. hive연결에서는 dbcp 연결하니깐 인증에러가 떠서 jdbc 연결로 바꿨다. hive연결의 dependency 설정은 다음 링크 참고 JDBC-Hive 연결(직접 연결) - https://blog.naver.com/ktkim121/222175703310 &lt;!-- postgresql --&gt; &lt;bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"&gt; &lt;property name="driverClassName" value="org.postgresql.Driver" /&gt; &lt;property name="url" value="jdbc:postgresql://localhost:5432/postgres" /&gt;...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">January 5, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/java">Java</a>
+        <a href="/category/python">Python</a>
         
       
       </div>
@@ -301,7 +307,7 @@ WHERE Column1 = 'Param1'
 			</span>
 		</a>
 	
-	<span class="page-number">Page 3 of 5</span>
+	<span class="page-number">Page 3 of 6</span>
 	
 		<a class="newer-posts" href="/page/4/">
 			<span class="fa-stack fa-lg">
@@ -339,6 +345,12 @@ WHERE Column1 = 'Param1'
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
 	
 
 	

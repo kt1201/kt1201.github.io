@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>jsp</title>
-  <meta name="description" content="김기태의 블로그입니다.
-">
+  <title>csv파일 dict형태로 변환</title>
+  <meta name="description" content="csv파일을 dictionary 형태로 변환하는 코드이다.">
   
   <meta name="author" content="kt1201">
   <meta name="copyright" content="&copy; kt1201 2021">
@@ -42,11 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="김기태의 블로그입니다.
-" />
-  <meta property="og:url" content="http://localhost:4000/category/jsp/">
+  <meta property="og:description" content="csv파일을 dictionary 형태로 변환하는 코드이다." />
+  <meta property="og:url" content="http://localhost:4000/python/2021/02/24/Convert-CSV-to-Dict.html">
   <meta property="og:site_name" content="코  드  저  장  소" />
-  <meta property="og:title" content="jsp" />
+  <meta property="og:title" content="csv파일 dict형태로 변환" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -57,18 +55,17 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="jsp">
-  <meta name="twitter:description" content="김기태의 블로그입니다.
-">
+  <meta name="twitter:title" content="csv파일 dict형태로 변환">
+  <meta name="twitter:description" content="csv파일을 dictionary 형태로 변환하는 코드이다.">
   <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/category/jsp/">
+  <meta name="twitter:url" content="http://localhost:4000/python/2021/02/24/Convert-CSV-to-Dict.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/category/jsp/">
+  <link rel="canonical" href="http://localhost:4000/python/2021/02/24/Convert-CSV-to-Dict.html">
 	<link rel="alternate" type="application/rss+xml" title="코  드  저  장  소" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
@@ -145,38 +142,91 @@
 
 
     <div class="page-content">
-        <div class="wrapper">
-<div class="page">
+        <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">Posts in "Jsp" (5)</h1>
-  </header>
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">csv파일 dict형태로 변환</h1>
+      <p class="info">by <strong>kt1201</strong></p>
+    </header>
+  </div>
+</div>
 
-  <span class="page-divider">
+<div class="wrapper">
+
+ <span class="page-divider">
   <span class="one"></span>
   <span class="two"></span>
 </span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">February 24, 2021</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/Python">Python</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>csv파일을 dictionary 형태로 변환하는 코드이다.</p>
+
+<p>csv파일의 컬럼명을 바꿀 일이 있어 header를 새로 만들고 기존의 header는 <code class="language-plaintext highlighter-rouge">next()</code>로 건너 뛰었다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">csv_dict_list</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="p">.</span><span class="n">DictReader</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="s">'rt'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">"euc-kr"</span><span class="p">),</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">fieldnames</span><span class="p">)</span>
+    <span class="n">dict_list</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="nb">next</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span>  <span class="c1"># csv파일 한줄 건너 뛰기(컬럼 존재할 경우)
+</span>    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="n">dict_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dict_list</span>
+
+<span class="n">csv</span> <span class="o">=</span> <span class="s">"doc/dat/sample.csv"</span>  <span class="c1"># csv파일
+</span><span class="n">header</span> <span class="o">=</span> <span class="p">[</span><span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="n">column3</span><span class="p">,</span> <span class="n">column4</span><span class="p">]</span>  <span class="c1"># 컬럼
+</span><span class="n">response</span> <span class="o">=</span> <span class="n">csv_dict_list</span><span class="p">(</span><span class="n">csv</span><span class="p">,</span> <span class="n">header</span><span class="p">)</span>
+</code></pre></div></div>
 
 
-  <article class="post-content">
-    <ul class="posts-list">
-      
-      <li><strong><a class="post-link" href="/jsp/2021/02/10/select-tag-selected-value.html">select 태그의 선택된 value 가져오기</a></strong><span class="post-date"> - February 10, 2021</span></li>
-      
-      <li><strong><a class="post-link" href="/jsp/2021/02/10/ajax-serialize().html">serialize()를 이용한 ajax Form 데이터 전송하기</a></strong><span class="post-date"> - February 10, 2021</span></li>
-      
-      <li><strong><a class="post-link" href="/jsp/2021/02/10/a-tag-onclick.html">a 태그 페이지 이동(onclick)</a></strong><span class="post-date"> - February 10, 2021</span></li>
-      
-      <li><strong><a class="post-link" href="/jsp/2021/02/10/Is-this-null.html">null 판별 코드</a></strong><span class="post-date"> - February 10, 2021</span></li>
-      
-      <li><strong><a class="post-link" href="/jsp/2021/01/04/Input-Webpage-in-Webpage.html">웹페이지 안에 웹페이지 넣기</a></strong><span class="post-date"> - January 4, 2021</span></li>
-      
-    </ul>
-  </article>
+</article>
+
+
+
+
+
+
+<section class="post-navigation">
+	<span class="prev-post">
+		
+			<a href="/jsp/2021/02/10/select-tag-selected-value.html">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+				</span>
+				<span class="page-number">select 태그의 선택된 value 가져오기</span>
+			</a>
+		
+	</span>
+	<span class="next-post">
+		
+			<a href="/python/2021/02/24/JSON-load,-loads,-dump,-dumps.html">
+				<span class="page-number">json load, loads, dump, dumps</span>
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+		
+	</span>
+</section>
+
+
 
 </div>
 </div>
-<br>
 
     </div>
 
