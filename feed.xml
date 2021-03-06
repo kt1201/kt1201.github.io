@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Mar 2021 16:31:01 +0900</pubDate>
-    <lastBuildDate>Sat, 06 Mar 2021 16:31:01 +0900</lastBuildDate>
+    <pubDate>Sat, 06 Mar 2021 16:39:08 +0900</pubDate>
+    <lastBuildDate>Sat, 06 Mar 2021 16:39:08 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
@@ -24,7 +24,7 @@
     
       <item>
         <title>(Docker)Docker 사용법</title>
-        <description>&lt;h3 id=&quot;docker란&quot;&gt;Docker란?&lt;/h3&gt; &lt;p&gt;도커는 컨테이너 기반의 오픈소스 가상화 플랫폼 중 하나이다. Container와 VM의 차이는 &lt;a href=&quot;https://kt1201.github.io/server/2021/03/06/Container-vs-VM.html&quot;&gt;다음&lt;/a&gt; 링크를 참조.&lt;/p&gt; &lt;p&gt;아키텍쳐는 아래와 같다.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://kt1201.github.io/assets/posts/20210306-Docker1.png&quot; alt=&quot;20210306-Docker2&quot; /&gt;&lt;/p&gt; &lt;p&gt;Docker는 Client-Server 아키텍쳐이다. Docker Client와 Docker...</description>
+        <description>&lt;h3 id=&quot;docker란&quot;&gt;Docker란?&lt;/h3&gt; &lt;p&gt;도커는 컨테이너 기반의 오픈소스 가상화 플랫폼 중 하나이다. Container와 VM의 차이는 &lt;a href=&quot;https://kt1201.github.io/server/2021/03/06/Container-vs-VM.html&quot;&gt;다음&lt;/a&gt; 링크를 참조.&lt;/p&gt; &lt;p&gt;아키텍쳐는 아래와 같다.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://kt1201.github.io/assets/posts/20210306_Docker1.png&quot; alt=&quot;20210306_Docker1&quot; /&gt;&lt;/p&gt; &lt;p&gt;Docker는 Client-Server 아키텍쳐이다. Docker Client와 Docker...</description>
         <pubDate>Sat, 06 Mar 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/server/2021/03/06/(Docker)Docker.html</link>
         <guid isPermaLink="true">http://localhost:4000/server/2021/03/06/(Docker)Docker.html</guid>
