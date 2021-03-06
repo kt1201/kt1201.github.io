@@ -664,9 +664,10 @@ pre code.hljs {
 .button {
   background: #4E9CAF;
   margin: 5px;
-  padding: 10px;
+  padding: 4px;
   text-align: center;
   border-radius: 5px;
   color: white;
   font-weight: bold;
+  font-size: smaller;
   line-height: 25px; }
