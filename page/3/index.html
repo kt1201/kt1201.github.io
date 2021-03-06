@@ -159,6 +159,82 @@
   
   <li>
     <h2>
+      <a class="post-link" href="/java/2021/02/10/ellipsis.html">Java로 말줄임</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>Java로 말줄임
+
+public String ellipsis(String stdOut) {
+    String ellipsisString = "...";
+    int length = 8;
+    if(stdOut != null &amp;&amp; stdOut.length()&gt;0){
+        if(stdOut.length()&gt;length){
+            stdOut = stdOut.substring(0, length);
+            stdOut += ellipsisString;
+    	}
+    }
+    return stdOut
+}
+
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">February 10, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/java">Java</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/java/2021/02/10/convert-date-format.html">String 형식의 Date format 변경</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>String 형식의 Date format 변경
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+SimpleDateFormat transFormat1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+SimpleDateFormat transFormat1_1 = new SimpleDateFormat("yyyyMMddHHmmss");
+
+String actualBeginDt = "20210210011120"
+
+Date actualBeginDt_date = transFormat1_1.parse(actualBeginDt);
+actualBeginDt = transFormat1.format(actualBeginDt_date);  // "2021-02-10 01:11:20"
+
+
+String -&gt; Date 는 parse(String)
+
+Date -&gt; String 은 format(Date)
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">February 10, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/java">Java</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
       <a class="post-link" href="/java/2021/01/28/(Spring)-File-upload.html">(Spring) 파일 업로드</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
@@ -214,78 +290,6 @@
       in 
         
         <a href="/category/java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/java/2021/01/06/(Spring)-Make-Query-by-Dynamic-Parameter-in-Mybatis.html">(Spring) Mybatis 동적 컬럼 및 동적 테이블 parameter로 받아 쿼리문 생성할 때</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>${param} 은 ‘’ 안붙이고 쿼리문 생성
-
-#{param} 은 ‘’ 붙이고 쿼리문 생성
-
-예시
-
-SELECT ${Column1}
-FROM ${Db1}.${Table1}
-WHERE Column1 = #{Param1}
-
-
-–&gt; 다음과 같이 쿼리문 생성 –&gt;
-
-SELECT Column1
-FROM Db1.Table1
-WHERE Column1 = 'Param1'
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">January 6, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/python/2021/01/06/Site-Packages-Path.html">site-packages 경로</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>pip으로 패키지를 다운받을수 없는 경우 수동으로 패키지를 넣어줘야 할때를 대비해 기록
-
-* Linux
-
-/usr/lib/python3.6/site-packages
-
-(다음 경로에 대한 write 권한 필요)
-
-* Windows
-
-C:\Users\user\AppData\Local\Programs\Python\Python37\Lib\site-packages
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">January 6, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/python">Python</a>
         
       
       </div>

@@ -159,6 +159,73 @@
   
   <li>
     <h2>
+      <a class="post-link" href="/jsp/2021/01/04/Input-Webpage-in-Webpage.html">웹페이지 안에 웹페이지 넣기</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>include 사용
+
+&lt;div style="width: 500px; height: 400px;"&gt;
+    &lt;%@ include file="/WEB-INF/jsp/analysis/test.html" %&gt;
+&lt;/div&gt;
+
+
+iframe 사용
+
+iframe의 src에 html의 실제 경로를 넣으면 chrome에서
+
+“not allowed to load local resource” 라는 에러가 뜬다.
+
+이때는, 톰캣의 server.xml의 Host태그 안에 다음 코드를 추가한다.
+
+&lt;Context path="/filepath" reloadable="true" docBase="C:\Users\user\git\kcgsb\sb-portal-dev\src\main\webapp\WEB-INF\jsp"/&gt;
+
+
+아래는 JSP 코드
+
+&lt;iframe src="/filepath/analysis/test.html" width=500 height=500&gt;&lt;/iframe&gt;
+
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">January 4, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/jsp">Jsp</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/database/2020/12/24/(Postgres)-Import-CSV.html">(Postgres) CSV파일 DB에 Import</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>Postgres에서 CSV파일을 import 시킬때 명령어는 COPY 테이블명 FROM 'csv파일 경로' WITH DELIMITER ',' csv header; 근데 로컬에서 바탕화면에 csv파일 저장하고 쿼리문 실행했더니 Permission denied가 나온다. 그럴 때는 C:\Program Files\PostgreSQL\12\scripts\table.csv 저 위치에 csv파일 넣고 실행시키면 된다.(관리자 권한 필요) (psql에서는 copy 명령어에 대한 권한을 user에게 부여해야 한다.) 리눅스에서는 psql -h 10.188.171.214 -U...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">December 24, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/database">Database</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
       <a class="post-link" href="/java/2020/12/22/HttpsURLConnection-headers.html">HttpsURLConnection의 headers값 가져오기</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
@@ -210,50 +277,6 @@
     </section>
     <section class="post-meta">
       <div class="post-date">June 4, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/hadoop">Hadoop</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/hadoop/2020/06/03/Hadoop-Multimode.html">Hadoop 멀티모드 구축</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>Hadoop 멀티모드 구축 Slave 생성 File - Export to OVF… // Master 배포 File - Open - 이름과 경로 지정 - Import // Slave 생성 network 맞춰주고 Take snapshot slave들은 Memory 1GB로 변경 (자신의 컴퓨터 성능에 따라 선택) 각 서버 계정 명 변경 sudo vim /etc/hostname dd(삭제) 후 각 이름...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">June 3, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/hadoop">Hadoop</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/hadoop/2020/06/02/Hadoop-Singlemode.html">Hadoop 싱글모드 구축</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>Hadoop 싱글모드 구축 net-tools, vim, ssh, Jdk 설치 및 환경변수 설정 sudo apt-get update sudo apt install net-tools sudo apt-get install vim -y sudo apt-get install ssh -y ifconfig // net-tools 확인 vim // vim 확인 sudo /etc/init.d/ssh start // ssh 확인 sudo apt-get install default-jdk -y // jdk 설치...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">June 2, 2020</div>
       <div class="post-categories">
       in 
         

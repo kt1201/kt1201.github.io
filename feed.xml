@@ -6,9 +6,33 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Mar 2021 15:37:20 +0900</pubDate>
-    <lastBuildDate>Sat, 06 Mar 2021 15:37:20 +0900</lastBuildDate>
+    <pubDate>Sat, 06 Mar 2021 16:31:01 +0900</pubDate>
+    <lastBuildDate>Sat, 06 Mar 2021 16:31:01 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>Container vs VM</title>
+        <description>&lt;h3 id=&quot;container-vs-virtual-machine&quot;&gt;Container vs Virtual Machine&lt;/h3&gt; &lt;p&gt;소프트웨어는 OS와 라이브러리에 의존성을 띈다. 그러므로 하나의 컴퓨터에서 성격이 다른 소프트웨어를 한번에 실행할 때 어려움을 가질 수 있고 관련된 구성을 관리하기가 어렵다. Container는 개별 소프트웨어의...</description>
+        <pubDate>Sat, 06 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/server/2021/03/06/Container-vs-VM.html</link>
+        <guid isPermaLink="true">http://localhost:4000/server/2021/03/06/Container-vs-VM.html</guid>
+        
+        
+        <category>server</category>
+        
+      </item>
+    
+      <item>
+        <title>(Docker)Docker 사용법</title>
+        <description>&lt;h3 id=&quot;docker란&quot;&gt;Docker란?&lt;/h3&gt; &lt;p&gt;도커는 컨테이너 기반의 오픈소스 가상화 플랫폼 중 하나이다. Container와 VM의 차이는 &lt;a href=&quot;https://kt1201.github.io/server/2021/03/06/Container-vs-VM.html&quot;&gt;다음&lt;/a&gt; 링크를 참조.&lt;/p&gt; &lt;p&gt;아키텍쳐는 아래와 같다.&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://kt1201.github.io/assets/posts/20210306-Docker1.png&quot; alt=&quot;20210306-Docker2&quot; /&gt;&lt;/p&gt; &lt;p&gt;Docker는 Client-Server 아키텍쳐이다. Docker Client와 Docker...</description>
+        <pubDate>Sat, 06 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/server/2021/03/06/(Docker)Docker.html</link>
+        <guid isPermaLink="true">http://localhost:4000/server/2021/03/06/(Docker)Docker.html</guid>
+        
+        
+        <category>server</category>
+        
+      </item>
     
       <item>
         <title>Proxy 서버 생성</title>
@@ -100,30 +124,6 @@
         <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/java/2021/02/10/escape-HTML-string-in-Java.html</link>
         <guid isPermaLink="true">http://localhost:4000/java/2021/02/10/escape-HTML-string-in-Java.html</guid>
-        
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>Java로 말줄임</title>
-        <description>&lt;h4 id=&quot;java로-말줄임&quot;&gt;Java로 말줄임&lt;/h4&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ellipsis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stdOut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ellipsisString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;...&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span...</description>
-        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/java/2021/02/10/ellipsis.html</link>
-        <guid isPermaLink="true">http://localhost:4000/java/2021/02/10/ellipsis.html</guid>
-        
-        
-        <category>java</category>
-        
-      </item>
-    
-      <item>
-        <title>String 형식의 Date format 변경</title>
-        <description>&lt;h4 id=&quot;string-형식의-date-format-변경&quot;&gt;String 형식의 Date format 변경&lt;/h4&gt; &lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.text.SimpleDateFormat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;java.util.Date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SimpleDateFormat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;transFormat1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SimpleDateFormat&lt;/span&gt;&lt;span...</description>
-        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/java/2021/02/10/convert-date-format.html</link>
-        <guid isPermaLink="true">http://localhost:4000/java/2021/02/10/convert-date-format.html</guid>
         
         
         <category>java</category>
