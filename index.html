@@ -135,6 +135,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -159,17 +161,107 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/server/2021/03/06/(Docker)Docker.html">(Docker)Docker 사용법</a>
+      <a class="post-link" href="/database/2021/03/12/Transaction.html">트랜잭션(Transaction)</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>Docker란? 도커는 컨테이너 기반의 오픈소스 가상화 플랫폼 중 하나이다. Container와 VM의 차이는 다음 링크를 참조. 아키텍쳐는 아래와 같다. Docker는 Client-Server 아키텍쳐이다. Docker Client와 Docker Demon이 RespAPI를 사용하여 통신한다. Docker 데몬 Docker Api 요청수신, 이미지,컨테이너,네트워크와 같은 도커 객체 및 도커 서비스 관리 Docker 클라이언트 Docker 사용자가 Docker와 상호작용하기 위한 방법. 기본적인...</p>
+      <p>트랜잭션의 정의 트랜잭션(Transaction)은 데이터베이스의 상태를 변환시키는 하나의 논리적 기능을 수행하기 위한 작업의 단위 또는 한꺼번에 모두 수행되어야 할 일련의 연산들을 의미한다. 트랜잭션의 특징 1. 트랜잭션은 데이터베이스 시스템에서 병행 제어 및 회복 작업 시 처리되는 작업의 논리적 단위이다. 2. 사용자가 시스템에 대한 서비스 요구 시 시스템이 응답하기 위한 상태 변환 과정의...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">March 6, 2021</div>
+      <div class="post-date">March 12, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/database">Database</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/server/2021/03/12/windows-port-kill.html">윈도우에서 특정 port kill하기</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>가끔 개발하다보면 Tomcat 프로세스가 좀비처럼 남아서 lock 을 잡고 있을 때가 있다. 그럴 때는 과감히 kill 시킨다. C:\Users\Administrator&gt;**netstat -aon 활성 연결 프로토콜 로컬 주소 외부 주소 상태 PID TCP 0.0.0.0:135 0.0.0.0:0 LISTENING 1020 TCP 0.0.0.0:445 0.0.0.0:0 LISTENING 4 TCP 0.0.0.0:1500 0.0.0.0:0 LISTENING 868 TCP 0.0.0.0:3389 0.0.0.0:0 LISTENING 1680 TCP 0.0.0.0:6063...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">March 12, 2021</div>
       <div class="post-categories">
       in 
         
         <a href="/category/server">Server</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/python/2021/03/12/other-path-file-import.html">다른 폴더의 파일 import</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>동일폴더의 파일 import
+
+import a.py
+
+
+상위 폴더의 파일 import
+
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+import a.py
+
+
+시스템 환경변수 추가
+
+
+$ vi ~/bash_profile
+
+========= bash_profile =========
+...
+PYTHONPATH=$PYTHONPATH:/home/user/test
+export PYTHONPATH
+============================
+$ source ~/bash_profile
+
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">March 12, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/python">Python</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/python/2021/03/09/pyhive.html">Pyhive로 python-hive 연결(install sasl 해결)</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>설치할 라이브러리는 아래와 같다. # OS에 sasl 설치 yum install libsasl2-dev # 파이썬 패키지 설치 pip install sasl pip install thrift pip install thrift-sasl pip install PyHive library들을 설치하던 중 sasl 설치에서 문제가 생겼다. sasl이 pip으로 설치가 되지 않는다. sasl은 버전별로 지원하는 library가 다르다. 현재는 python3.7까지만 지원한다. 때문에 https://www.lfd.uci.edu/~gohlke/pythonlibs/#sasl 다음...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">March 9, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/python">Python</a>
         
       
       </div>
@@ -198,72 +290,6 @@
     </section>
   </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/python/2021/02/24/Convert-CSV-to-Dict.html">csv파일 dict형태로 변환</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>csv파일을 dictionary 형태로 변환하는 코드이다. csv파일의 컬럼명을 바꿀 일이 있어 header를 새로 만들고 기존의 header는 next()로 건너 뛰었다. def csv_dict_list(csvfile, fieldnames=None): reader = csv.DictReader(open(csvfile, 'rt', encoding="euc-kr"), fieldnames=fieldnames) dict_list = [] next(reader) # csv파일 한줄 건너 뛰기(컬럼 존재할 경우) for line in reader: dict_list.append(line) return dict_list csv = "doc/dat/sample.csv" # csv파일...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">February 24, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/python">Python</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/server/2021/02/24/Foward-Proxy.html">Proxy 서버 생성</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>Proxy 서버란? Proxy는 자신을 통해서 다른 네트워크에 간접적으로 접속할 수 있도록 해주는 컴퓨터 혹은 프로그램을 가리킨다. 요청을 중계하는 프로그램. proxy 프로그램은 서버로서 작동하기 때문에 일반적으로 proxy 서버라고 한다. Proxy 서버를 구축하는 이유 보안 : 익명의 사용자가 서버에 직접 접근하는 것을 막는다. 속도 : proxy 서버는 사용자의 요청을 cache해서, 동일한 요청이...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">February 24, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/server">Server</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/python/2021/02/24/JSON-load,-loads,-dump,-dumps.html">json load, loads, dump, dumps</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>json.dump, json.dumps dump 계열은 파이썬의 객체(dict 등)를 다른 형태로 변환한다. dump 함수는 파이썬 객체를 스트림 객체(파일 등)로 변환한다. dumps 함수는 파이썬 객체를 한줄의(직렬화된) json 문자열로 변환한다. json.load, json.loads load 계열은 대상을 파싱해서 파이썬의 객체(dict 등)로 변환한다. load 함수는 스트림 객체(파일 등)에서 데이터를 읽어 파이썬 객체(dict 등)로 변환한다. loads 함수는 json...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">February 24, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/python">Python</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
   
 </ul>
 
@@ -275,7 +301,7 @@
 			<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
 		</span>
 	
-	<span class="page-number">Page 1 of 6</span>
+	<span class="page-number">Page 1 of 7</span>
 	
 		<a class="newer-posts" href="/page/2/">
 			<span class="fa-stack fa-lg">
@@ -313,6 +339,8 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	

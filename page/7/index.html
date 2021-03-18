@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>코  드  저  장  소 - page 4</title>
+  <title>코  드  저  장  소 - page 7</title>
   <meta name="description" content="김기태의 블로그입니다.
 ">
   
@@ -44,9 +44,9 @@
   <!-- Facebook OGP cards -->
   <meta property="og:description" content="김기태의 블로그입니다.
 " />
-  <meta property="og:url" content="http://localhost:4000/page/4/index.html">
+  <meta property="og:url" content="http://localhost:4000/page/7/index.html">
   <meta property="og:site_name" content="코  드  저  장  소" />
-  <meta property="og:title" content="코  드  저  장  소 - page 4" />
+  <meta property="og:title" content="코  드  저  장  소 - page 7" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -57,18 +57,18 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="코  드  저  장  소 - page 4">
+  <meta name="twitter:title" content="코  드  저  장  소 - page 7">
   <meta name="twitter:description" content="김기태의 블로그입니다.
 ">
   <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/page/4/index.html">
+  <meta name="twitter:url" content="http://localhost:4000/page/7/index.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/page/4/">
+  <link rel="canonical" href="http://localhost:4000/page/7/">
 	<link rel="alternate" type="application/rss+xml" title="코  드  저  장  소" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
@@ -161,34 +161,17 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/java/2021/02/10/convert-date-format.html">String 형식의 Date format 변경</a>
+      <a class="post-link" href="/hadoop/2020/06/02/Hadoop-Singlemode.html">Hadoop 싱글모드 구축</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>String 형식의 Date format 변경
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-SimpleDateFormat transFormat1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-SimpleDateFormat transFormat1_1 = new SimpleDateFormat("yyyyMMddHHmmss");
-
-String actualBeginDt = "20210210011120"
-
-Date actualBeginDt_date = transFormat1_1.parse(actualBeginDt);
-actualBeginDt = transFormat1.format(actualBeginDt_date);  // "2021-02-10 01:11:20"
-
-
-String -&gt; Date 는 parse(String)
-
-Date -&gt; String 은 format(Date)
-</p>
+      <p>Hadoop 싱글모드 구축 net-tools, vim, ssh, Jdk 설치 및 환경변수 설정 sudo apt-get update sudo apt install net-tools sudo apt-get install vim -y sudo apt-get install ssh -y ifconfig // net-tools 확인 vim // vim 확인 sudo /etc/init.d/ssh start // ssh 확인 sudo apt-get install default-jdk -y // jdk 설치...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">February 10, 2021</div>
+      <div class="post-date">June 2, 2020</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/java">Java</a>
+        <a href="/category/hadoop">Hadoop</a>
         
       
       </div>
@@ -200,100 +183,17 @@ Date -&gt; String 은 format(Date)
   
   <li>
     <h2>
-      <a class="post-link" href="/java/2021/01/28/(Spring)-File-upload.html">(Spring) 파일 업로드</a>
+      <a class="post-link" href="/hadoop/2020/06/01/Before-Install.html">설치 전에...</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>우선 화면에서 form 태그를 생성하는데, 여기서 중요한건 2가지가 있다. &lt;form name="detailForm" method="post" enctype="multipart/form-data"&gt; &lt;input type="file" multiple="multiple" name="file" class="ct_input_g"&gt; ... &lt;/form&gt; form 태그의 { enctype=”multipart/form-data” } -&gt; 파일 업로드 기능을 사용할 수 있게 한다. input 태그의 { type=”file”, multiple=”multiple” } -&gt; 파일 다중업로드가 가능하도록 한다. 이렇게 파일을 올렸다면, Controller 에서 인자로...</p>
+      <p>데이터 종류 정형 데이터 필드 고정 text 형식의 데이터 반정형 데이터 필드 고정 X XML, JSON 비정형 데이터 다양한 데이터(사진, 동영상, 메신저, 위치정보) SQL vs NoSQL SQL 기존의 RDBMS mysql, oracle … NoSQL 비정형데이터를 처리하기 위한 기술 관계보다는 키와 값으로 단순 처리 조인 X, 샤딩 활용 mongoDB, Hbase, aws DynamoDB...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">January 28, 2021</div>
+      <div class="post-date">June 1, 2020</div>
       <div class="post-categories">
       in 
         
-        <a href="/category/java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/java/2021/01/21/(Spring)-Maven-Dynamic-Environment-Configuration.html">(Spring)  Maven 동적 환경구성</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>Maven Properties pom.xml 파일에서 maven 프로퍼티를 사용하여 동적인 환경 구성이 가능하다. 프로퍼티에는 아래 5가지 종류가 있다. 1. Maven Project Properties Maven Project Object Model(pom.xml) 에 정의된 값. prefix. : project.* ﻿ex) ${project.build.outputDirectory} &lt;dependency&gt; &lt;groupId&gt;${project.groupId}&lt;/groupId&gt; &lt;artifactId&gt;project&lt;/artifactId&gt; &lt;version&gt;${project.version}&lt;/version&gt; &lt;/dependency&gt; 2. Maven Settings Properties ~/.m2/settings.xml 에 정의된 값 사용 prefix : settings.* 3....</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">January 21, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/java/2021/01/21/(Spring)-Missing-artifact-jdk.toolsjdk.toolsjar1.x.html">(Spring) Missing artifact jdk.tools:jdk.tools:jar:1.x</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>maven의 pom.xml에서 Missing artifact jdk.tools:jdk.tools:jar:1.x 에러 발생시 설정 원인 jre에 JAVA_HOME이 설정되어 tools.jar를 올바르게 가져오지 못함 프로젝트가 잘못된 jdk를 찾음(내 PC에서만 이런 오류가 났음;; 이유는 아직 못찾음) 해결방법 방법1. eclipse.ini 파일에 vm 위치추가 -vm C:\Program Files\Java\jdk1.8.0_281\bin\javaw ​ 방법2. 이클립스 Window &gt; Preferences &gt; Java &gt; Installed JREs에서 Installed JREs에 있는...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">January 21, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/java/2021/01/06/(Spring)-Make-Query-by-Dynamic-Parameter-in-Mybatis.html">(Spring) Mybatis 동적 컬럼 및 동적 테이블 parameter로 받아 쿼리문 생성할 때</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>${param} 은 ‘’ 안붙이고 쿼리문 생성
-
-#{param} 은 ‘’ 붙이고 쿼리문 생성
-
-예시
-
-SELECT ${Column1}
-FROM ${Db1}.${Table1}
-WHERE Column1 = #{Param1}
-
-
-–&gt; 다음과 같이 쿼리문 생성 –&gt;
-
-SELECT Column1
-FROM Db1.Table1
-WHERE Column1 = 'Param1'
-
-</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">January 6, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/java">Java</a>
+        <a href="/category/hadoop">Hadoop</a>
         
       
       </div>
@@ -306,21 +206,19 @@ WHERE Column1 = 'Param1'
 <nav class="pagination" role="navigation">
 	<p>
     
-		<a class="newer-posts" href="/page/3/">
+		<a class="newer-posts" href="/page/6/">
 			<span class="fa-stack fa-lg">
 				<i class="fa fa-square fa-stack-2x"></i>
 				<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
 			</span>
 		</a>
 	
-	<span class="page-number">Page 4 of 7</span>
+	<span class="page-number">Page 7 of 7</span>
 	
-		<a class="newer-posts" href="/page/5/">
-			<span class="fa-stack fa-lg">
-				<i class="fa fa-square fa-stack-2x"></i>
-				<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-			</span>
-		</a>
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-square fa-stack-2x"></i>
+			<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+		</span>
 	
 	</p>
 </nav>

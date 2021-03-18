@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>jsp</title>
-  <meta name="description" content="김기태의 블로그입니다.
-">
+  <title>다른 폴더의 파일 import</title>
+  <meta name="description" content="동일폴더의 파일 import">
   
   <meta name="author" content="kt1201">
   <meta name="copyright" content="&copy; kt1201 2021">
@@ -42,11 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="김기태의 블로그입니다.
-" />
-  <meta property="og:url" content="http://localhost:4000/category/jsp/">
+  <meta property="og:description" content="동일폴더의 파일 import" />
+  <meta property="og:url" content="http://localhost:4000/python/2021/03/12/other-path-file-import.html">
   <meta property="og:site_name" content="코  드  저  장  소" />
-  <meta property="og:title" content="jsp" />
+  <meta property="og:title" content="다른 폴더의 파일 import" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -57,18 +55,17 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="jsp">
-  <meta name="twitter:description" content="김기태의 블로그입니다.
-">
+  <meta name="twitter:title" content="다른 폴더의 파일 import">
+  <meta name="twitter:description" content="동일폴더의 파일 import">
   <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/category/jsp/">
+  <meta name="twitter:url" content="http://localhost:4000/python/2021/03/12/other-path-file-import.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/category/jsp/">
+  <link rel="canonical" href="http://localhost:4000/python/2021/03/12/other-path-file-import.html">
 	<link rel="alternate" type="application/rss+xml" title="코  드  저  장  소" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
@@ -145,38 +142,98 @@
 
 
     <div class="page-content">
-        <div class="wrapper">
-<div class="page">
+        <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">Posts in "Jsp" (5)</h1>
-  </header>
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">다른 폴더의 파일 import</h1>
+      <p class="info">by <strong>kt1201</strong></p>
+    </header>
+  </div>
+</div>
 
-  <span class="page-divider">
+<div class="wrapper">
+
+ <span class="page-divider">
   <span class="one"></span>
   <span class="two"></span>
 </span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">March 12, 2021</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/python">Python</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h5 id="동일폴더의-파일-import">동일폴더의 파일 import</h5>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">a.py</span>
+</code></pre></div></div>
+
+<h5 id="상위-폴더의-파일-import">상위 폴더의 파일 import</h5>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sys</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">))))</span>
+<span class="kn">import</span> <span class="nn">a.py</span>
+</code></pre></div></div>
+
+<h5 id="시스템-환경변수-추가">시스템 환경변수 추가</h5>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nv">$ </span>vi ~/bash_profile
+
+<span class="o">=========</span> bash_profile <span class="o">=========</span>
+...
+<span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/home/user/test
+<span class="nb">export </span>PYTHONPATH
+<span class="o">============================</span>
+<span class="nv">$ </span><span class="nb">source</span> ~/bash_profile
+</code></pre></div></div>
 
 
-  <article class="post-content">
-    <ul class="posts-list">
-      
-      <li><strong><a class="post-link" href="/jsp/2021/02/10/select-tag-selected-value.html">select 태그의 선택된 value 가져오기</a></strong><span class="post-date"> - February 10, 2021</span></li>
-      
-      <li><strong><a class="post-link" href="/jsp/2021/02/10/ajax-serialize().html">serialize()를 이용한 ajax Form 데이터 전송하기</a></strong><span class="post-date"> - February 10, 2021</span></li>
-      
-      <li><strong><a class="post-link" href="/jsp/2021/02/10/a-tag-onclick.html">a 태그 페이지 이동(onclick)</a></strong><span class="post-date"> - February 10, 2021</span></li>
-      
-      <li><strong><a class="post-link" href="/jsp/2021/02/10/Is-this-null.html">null 판별 코드</a></strong><span class="post-date"> - February 10, 2021</span></li>
-      
-      <li><strong><a class="post-link" href="/jsp/2021/01/04/Input-Webpage-in-Webpage.html">웹페이지 안에 웹페이지 넣기</a></strong><span class="post-date"> - January 4, 2021</span></li>
-      
-    </ul>
-  </article>
+</article>
+
+
+
+
+
+
+<section class="post-navigation">
+	<span class="prev-post">
+		
+			<a href="/database/2021/03/12/Transaction.html">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+				</span>
+				<span class="page-number">트랜잭션(Transaction)</span>
+			</a>
+		
+	</span>
+	<span class="next-post">
+		
+			<a href="/server/2021/03/12/windows-port-kill.html">
+				<span class="page-number">윈도우에서 특정 port kill하기</span>
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+		
+	</span>
+</section>
+
+
 
 </div>
 </div>
-<br>
 
     </div>
 

@@ -6,9 +6,57 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 06 Mar 2021 16:39:08 +0900</pubDate>
-    <lastBuildDate>Sat, 06 Mar 2021 16:39:08 +0900</lastBuildDate>
+    <pubDate>Thu, 18 Mar 2021 13:25:14 +0900</pubDate>
+    <lastBuildDate>Thu, 18 Mar 2021 13:25:14 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>윈도우에서 특정 port kill하기</title>
+        <description>&lt;p&gt;가끔 개발하다보면 Tomcat 프로세스가 좀비처럼 남아서 lock 을 잡고 있을 때가 있다.&lt;/p&gt; &lt;p&gt;그럴 때는 과감히 kill 시킨다.&lt;/p&gt; &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C:&lt;span class=&quot;se&quot;&gt;\U&lt;/span&gt;sers&lt;span class=&quot;se&quot;&gt;\A&lt;/span&gt;dministrator&amp;gt;&lt;span class=&quot;k&quot;&gt;**&lt;/span&gt;netstat &lt;span class=&quot;nt&quot;&gt;-aon&lt;/span&gt; 활성 연결 프로토콜...</description>
+        <pubDate>Fri, 12 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/server/2021/03/12/windows-port-kill.html</link>
+        <guid isPermaLink="true">http://localhost:4000/server/2021/03/12/windows-port-kill.html</guid>
+        
+        
+        <category>server</category>
+        
+      </item>
+    
+      <item>
+        <title>다른 폴더의 파일 import</title>
+        <description>&lt;h5 id=&quot;동일폴더의-파일-import&quot;&gt;동일폴더의 파일 import&lt;/h5&gt; &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;a.py&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;h5 id=&quot;상위-폴더의-파일-import&quot;&gt;상위 폴더의 파일 import&lt;/h5&gt; &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span...</description>
+        <pubDate>Fri, 12 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/python/2021/03/12/other-path-file-import.html</link>
+        <guid isPermaLink="true">http://localhost:4000/python/2021/03/12/other-path-file-import.html</guid>
+        
+        
+        <category>python</category>
+        
+      </item>
+    
+      <item>
+        <title>트랜잭션(Transaction)</title>
+        <description>&lt;h3 id=&quot;트랜잭션의-정의&quot;&gt;트랜잭션의 정의&lt;/h3&gt; &lt;p&gt;트랜잭션(Transaction)은 데이터베이스의 상태를 변환시키는 하나의 논리적 기능을 수행하기 위한 작업의 단위 또는 한꺼번에 모두 수행되어야 할 일련의 연산들을 의미한다.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;트랜잭션의 특징&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; 트랜잭션은 데이터베이스 시스템에서 병행 제어...</description>
+        <pubDate>Fri, 12 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/database/2021/03/12/Transaction.html</link>
+        <guid isPermaLink="true">http://localhost:4000/database/2021/03/12/Transaction.html</guid>
+        
+        
+        <category>database</category>
+        
+      </item>
+    
+      <item>
+        <title>Pyhive로 python-hive 연결(install sasl 해결)</title>
+        <description>&lt;p&gt;설치할 라이브러리는 아래와 같다.&lt;/p&gt; &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# OS에 sasl 설치&lt;/span&gt; yum &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;libsasl2-dev &lt;span class=&quot;c&quot;&gt;# 파이썬 패키지 설치&lt;/span&gt; pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;sasl pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;thrift...</description>
+        <pubDate>Tue, 09 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/python/2021/03/09/pyhive.html</link>
+        <guid isPermaLink="true">http://localhost:4000/python/2021/03/09/pyhive.html</guid>
+        
+        
+        <category>python</category>
+        
+      </item>
     
       <item>
         <title>Container vs VM</title>
@@ -79,54 +127,6 @@
         
         
         <category>jsp</category>
-        
-      </item>
-    
-      <item>
-        <title>serialize()를 이용한 ajax Form 데이터 전송하기</title>
-        <description>&lt;h4 id=&quot;serialize를-이용한-ajax-form-데이터-전송하기&quot;&gt;serialize()를 이용한 ajax Form 데이터 전송하기&lt;/h4&gt; &lt;div class=&quot;language-jsp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;form&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;searchFrm&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;inline bg_gray dateSearch&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dateIcon&quot;&lt;/span&gt;&lt;span...</description>
-        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/jsp/2021/02/10/ajax-serialize().html</link>
-        <guid isPermaLink="true">http://localhost:4000/jsp/2021/02/10/ajax-serialize().html</guid>
-        
-        
-        <category>jsp</category>
-        
-      </item>
-    
-      <item>
-        <title>a 태그 페이지 이동(onclick)</title>
-        <description>&lt;h4 id=&quot;a-태그-페이지-이동onclick&quot;&gt;a 태그 페이지 이동(onclick)&lt;/h4&gt; &lt;div class=&quot;language-jsp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;ul&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0);&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onclick=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fn_cntcMthd();&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;수집유형&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;li&amp;gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;javascript:void(0);&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onclick=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fn_system();&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;시스템&lt;span...</description>
-        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/jsp/2021/02/10/a-tag-onclick.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jsp/2021/02/10/a-tag-onclick.html</guid>
-        
-        
-        <category>jsp</category>
-        
-      </item>
-    
-      <item>
-        <title>null 판별 코드</title>
-        <description>&lt;h4 id=&quot;null-판별-코드&quot;&gt;null 판별 코드&lt;/h4&gt; &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// null 판별 &amp;lt;script type=&quot;text/javascript&quot;&amp;gt; function fn_isEmpty(value){ if(value == null || value.length === 0) { return &quot;-&quot;; } else { return value;...</description>
-        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/jsp/2021/02/10/Is-this-null.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jsp/2021/02/10/Is-this-null.html</guid>
-        
-        
-        <category>jsp</category>
-        
-      </item>
-    
-      <item>
-        <title>Java로 HTML 태그가 포함된 문자열 치환해주기</title>
-        <description>&lt;h4 id=&quot;java로-html-태그가-포함된-문자열-치환해주기&quot;&gt;Java로 HTML 태그가 포함된 문자열 치환해주기&lt;/h4&gt; &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import org.apache.commons.lang3.StringEscapeUtils; public String escapeHtml(String log) { if (log != null &amp;amp;&amp;amp; log != &quot;&quot;) { log = StringEscapeUtils.escapeHtml4(log);...</description>
-        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/java/2021/02/10/escape-HTML-string-in-Java.html</link>
-        <guid isPermaLink="true">http://localhost:4000/java/2021/02/10/escape-HTML-string-in-Java.html</guid>
-        
-        
-        <category>java</category>
         
       </item>
     

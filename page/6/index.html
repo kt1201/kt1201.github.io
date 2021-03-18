@@ -135,6 +135,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -159,6 +161,94 @@
   
   <li>
     <h2>
+      <a class="post-link" href="/database/2020/12/24/(Postgres)-Import-CSV.html">(Postgres) CSV파일 DB에 Import</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>Postgres에서 CSV파일을 import 시킬때 명령어는 COPY 테이블명 FROM 'csv파일 경로' WITH DELIMITER ',' csv header; 근데 로컬에서 바탕화면에 csv파일 저장하고 쿼리문 실행했더니 Permission denied가 나온다. 그럴 때는 C:\Program Files\PostgreSQL\12\scripts\table.csv 저 위치에 csv파일 넣고 실행시키면 된다.(관리자 권한 필요) (psql에서는 copy 명령어에 대한 권한을 user에게 부여해야 한다.) 리눅스에서는 psql -h 10.188.171.214 -U...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">December 24, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/database">Database</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/java/2020/12/22/HttpsURLConnection-headers.html">HttpsURLConnection의 headers값 가져오기</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>전에 올렸던 서버단에서 URL로 파일 다운로드받는 코드에서 추가해야할 부분이 생겼다. URL을 요청하면 headers값이 같이 온다. 기존에는 원래 header값들을 무시하고 새로 header를 만들었는데 처음 data.go.kr에서 받아오는 response header의 Content_TYPE과 CONTENT_DISPOSITION이 필요해서 가져와야 하는 경우가 생겼다 try { URL obj = new URL(dataurl); HttpsURLConnection con = (HttpsURLConnection) obj.openConnection(); // 해당 url 연결...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">December 22, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/java">Java</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/java/2020/12/16/JDBC-Hive-Connect.html">JDBC - Hive 연결(직접 연결)</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>JDBC로 Hive 연결하여 쿼리문 날려서 map 형태로 return 먼저 의존성 당시 사용하던건 클라우데라꺼 였는데 의존성은 클라우데라의 의존성을 쓰지 않아도 driver를 잘 찾았다. (클라우데라의 jar파일을 수동으로 넣었는데 driver를 못찾음;; 왜지??) 버전은 각 환경에 맞는 버전으로 설정 &lt;dependency&gt; &lt;groupId&gt;org.apache.hive&lt;/groupId&gt; &lt;artifactId&gt;hive-exec&lt;/artifactId&gt; &lt;version&gt;2.3.7&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.hive&lt;/groupId&gt; &lt;artifactId&gt;hive-jdbc&lt;/artifactId&gt; &lt;version&gt;2.3.7&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.thrift&lt;/groupId&gt; &lt;artifactId&gt;libthrift&lt;/artifactId&gt; &lt;version&gt;0.9.3&lt;/version&gt; &lt;/dependency&gt;...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">December 16, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/java">Java</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/hadoop/2020/06/04/WordCount.html">WordCount 코딩 및 실행</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>WordCount 코딩 및 실행 eclipse java project 생성 (name : WordCount) 프로젝트 protperties - Java Build Path - Libraries - Add External JARs…. hadoop API 3가지 추가 /usr/local/hadoop/share/hadoop/common/hadoop-common-2.9.2.jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.2.jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.9.2.jar 코딩 …. (WordCount 프로젝트 참고) jar 파일 생성 filezilla로 /home/manager 에 jar 파일 업로드 WordCount Test // 기존 파일 삭제하고...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">June 4, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/hadoop">Hadoop</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
       <a class="post-link" href="/hadoop/2020/06/03/Hadoop-Multimode.html">Hadoop 멀티모드 구축</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
@@ -166,50 +256,6 @@
     </section>
     <section class="post-meta">
       <div class="post-date">June 3, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/hadoop">Hadoop</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/hadoop/2020/06/02/Hadoop-Singlemode.html">Hadoop 싱글모드 구축</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>Hadoop 싱글모드 구축 net-tools, vim, ssh, Jdk 설치 및 환경변수 설정 sudo apt-get update sudo apt install net-tools sudo apt-get install vim -y sudo apt-get install ssh -y ifconfig // net-tools 확인 vim // vim 확인 sudo /etc/init.d/ssh start // ssh 확인 sudo apt-get install default-jdk -y // jdk 설치...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">June 2, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/hadoop">Hadoop</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/hadoop/2020/06/01/Before-Install.html">설치 전에...</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>데이터 종류 정형 데이터 필드 고정 text 형식의 데이터 반정형 데이터 필드 고정 X XML, JSON 비정형 데이터 다양한 데이터(사진, 동영상, 메신저, 위치정보) SQL vs NoSQL SQL 기존의 RDBMS mysql, oracle … NoSQL 비정형데이터를 처리하기 위한 기술 관계보다는 키와 값으로 단순 처리 조인 X, 샤딩 활용 mongoDB, Hbase, aws DynamoDB...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">June 1, 2020</div>
       <div class="post-categories">
       in 
         
@@ -233,12 +279,14 @@
 			</span>
 		</a>
 	
-	<span class="page-number">Page 6 of 6</span>
+	<span class="page-number">Page 6 of 7</span>
 	
-		<span class="fa-stack fa-lg">
-			<i class="fa fa-square fa-stack-2x"></i>
-			<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-		</span>
+		<a class="newer-posts" href="/page/7/">
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+			</span>
+		</a>
 	
 	</p>
 </nav>
@@ -269,6 +317,8 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	

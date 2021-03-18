@@ -135,6 +135,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -156,6 +158,105 @@
 
 <div class="wrapper">
 <ul class="post-list">
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/python/2021/01/06/Site-Packages-Path.html">site-packages 경로</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>pip으로 패키지를 다운받을수 없는 경우 수동으로 패키지를 넣어줘야 할때를 대비해 기록
+
+* Linux
+
+/usr/lib/python3.6/site-packages
+
+(다음 경로에 대한 write 권한 필요)
+
+* Windows
+
+C:\Users\user\AppData\Local\Programs\Python\Python37\Lib\site-packages
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">January 6, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/python">Python</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/linux/2021/01/06/command-Is_Success.html">명령어 성공 여부</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>명령어를 실행하면 그에 따른 return이 $?에 저장이 된다. 0 이 리턴되면 정상, 0이 리턴되지 않으면 오류로 간주 쉘스크립트로 만들면 아래와 같다. #!/bin/sh ls /etc | grep hosts if [ $? -eq 0 ];then echo "CMD OK!" else echo "CMD Failure!" exit(9) fi 그런데 더 간단하게 보이는 방법으로서 명령을 실행하고 나서...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">January 6, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/linux">Linux</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/java/2021/01/05/(Spring)-Multi-Datasource.html">(Spring) 다중 datasource 설정</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>다중 datasource 설정을 해보자 연결할 DB는 postgresql과 hive다 context-datasource.xml 설정 각 bean의 id를 다르게 해주어야 한다. hive연결에서는 dbcp 연결하니깐 인증에러가 떠서 jdbc 연결로 바꿨다. hive연결의 dependency 설정은 다음 링크 참고 JDBC-Hive 연결(직접 연결) - https://blog.naver.com/ktkim121/222175703310 &lt;!-- postgresql --&gt; &lt;bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"&gt; &lt;property name="driverClassName" value="org.postgresql.Driver" /&gt; &lt;property name="url" value="jdbc:postgresql://localhost:5432/postgres" /&gt;...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">January 5, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/java">Java</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/java/2021/01/05/(Spring)-Connection-Timeout-Error.html">(Spring) 일정 시간 지나면 Connection Pool 연결 끊어짐(connection time out error)</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>문제 - 마지막으로 DB에 connection을 맺은 후 일정시간 사용이 없다보니 DB connection이 끊겼다. 원인 - connection이 연결된 이후 해당 connection이 close 없이 DBMS의 설정에 따른 일정 시간이 지나면 해당 connection을 종료시키게 된다. (ex. Mysql은 8시간 request가 오지 않으면 강제적으로 connection을 닫아버린다. Mysql의 설정을 변경함으로써 값을 바꿀 수는 있지만, 좋은 방법은...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">January 5, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/java">Java</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
   
   <li>
     <h2>
@@ -199,94 +300,6 @@ iframe의 src에 html의 실제 경로를 넣으면 chrome에서
     </section>
   </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/database/2020/12/24/(Postgres)-Import-CSV.html">(Postgres) CSV파일 DB에 Import</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>Postgres에서 CSV파일을 import 시킬때 명령어는 COPY 테이블명 FROM 'csv파일 경로' WITH DELIMITER ',' csv header; 근데 로컬에서 바탕화면에 csv파일 저장하고 쿼리문 실행했더니 Permission denied가 나온다. 그럴 때는 C:\Program Files\PostgreSQL\12\scripts\table.csv 저 위치에 csv파일 넣고 실행시키면 된다.(관리자 권한 필요) (psql에서는 copy 명령어에 대한 권한을 user에게 부여해야 한다.) 리눅스에서는 psql -h 10.188.171.214 -U...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">December 24, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/database">Database</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/java/2020/12/22/HttpsURLConnection-headers.html">HttpsURLConnection의 headers값 가져오기</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>전에 올렸던 서버단에서 URL로 파일 다운로드받는 코드에서 추가해야할 부분이 생겼다. URL을 요청하면 headers값이 같이 온다. 기존에는 원래 header값들을 무시하고 새로 header를 만들었는데 처음 data.go.kr에서 받아오는 response header의 Content_TYPE과 CONTENT_DISPOSITION이 필요해서 가져와야 하는 경우가 생겼다 try { URL obj = new URL(dataurl); HttpsURLConnection con = (HttpsURLConnection) obj.openConnection(); // 해당 url 연결...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">December 22, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/java/2020/12/16/JDBC-Hive-Connect.html">JDBC - Hive 연결(직접 연결)</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>JDBC로 Hive 연결하여 쿼리문 날려서 map 형태로 return 먼저 의존성 당시 사용하던건 클라우데라꺼 였는데 의존성은 클라우데라의 의존성을 쓰지 않아도 driver를 잘 찾았다. (클라우데라의 jar파일을 수동으로 넣었는데 driver를 못찾음;; 왜지??) 버전은 각 환경에 맞는 버전으로 설정 &lt;dependency&gt; &lt;groupId&gt;org.apache.hive&lt;/groupId&gt; &lt;artifactId&gt;hive-exec&lt;/artifactId&gt; &lt;version&gt;2.3.7&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.hive&lt;/groupId&gt; &lt;artifactId&gt;hive-jdbc&lt;/artifactId&gt; &lt;version&gt;2.3.7&lt;/version&gt; &lt;/dependency&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.thrift&lt;/groupId&gt; &lt;artifactId&gt;libthrift&lt;/artifactId&gt; &lt;version&gt;0.9.3&lt;/version&gt; &lt;/dependency&gt;...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">December 16, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/hadoop/2020/06/04/WordCount.html">WordCount 코딩 및 실행</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>WordCount 코딩 및 실행 eclipse java project 생성 (name : WordCount) 프로젝트 protperties - Java Build Path - Libraries - Add External JARs…. hadoop API 3가지 추가 /usr/local/hadoop/share/hadoop/common/hadoop-common-2.9.2.jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.9.2.jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.9.2.jar 코딩 …. (WordCount 프로젝트 참고) jar 파일 생성 filezilla로 /home/manager 에 jar 파일 업로드 WordCount Test // 기존 파일 삭제하고...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">June 4, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/hadoop">Hadoop</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
   
 </ul>
 
@@ -300,7 +313,7 @@ iframe의 src에 html의 실제 경로를 넣으면 chrome에서
 			</span>
 		</a>
 	
-	<span class="page-number">Page 5 of 6</span>
+	<span class="page-number">Page 5 of 7</span>
 	
 		<a class="newer-posts" href="/page/6/">
 			<span class="fa-stack fa-lg">
@@ -338,6 +351,8 @@ iframe의 src에 html의 실제 경로를 넣으면 chrome에서
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	
