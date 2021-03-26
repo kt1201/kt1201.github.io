@@ -134,6 +134,8 @@
 
 	
 
+	
+
 
       </ul>
     </nav>
@@ -261,7 +263,7 @@
       <tbody>
         <tr>
           <td>Container Name</td>
-          <td>datalake</td>
+          <td>datalake(자유대로 명명)</td>
         </tr>
         <tr>
           <td>Port</td>
@@ -270,7 +272,11 @@
       </tbody>
     </table>
 
-    <p>그 아래 Volumes을 통하여 local과 container의 공유폴더를 생성할 수 있다.</p>
+    <p>그 아래 Volumes을 통하여 local과 container간에 이어지는 공유폴더를 생성할 수 있다.</p>
+
+    <ul>
+      <li>Host Path에 local 경로인 C:\test를 적고, Container Path에 /home/hadoop/test를 적고, local의 test폴더에 파일을 올려놓으면 Container안의 test 폴더에서도 볼 수 있다.</li>
+    </ul>
 
     <p>설정을 한 후 Run을 누르면 Docker Container가 생성 및 구동된다.</p>
 
@@ -456,6 +462,8 @@
 
 	
 	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
 	
 
 	

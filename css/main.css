@@ -236,10 +236,12 @@ html, body {
   width: 100%; }
 
 code {
-  background-color: #eee;
-  display: inline-block;
-  border-radius: 3px;
-  padding: 0 3px; }
+  font-size: 0.8333333333em;
+  color: #f8f8f2;
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #23241f; }
 
 blockquote {
   color: #999;

@@ -6,9 +6,45 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Mar 2021 13:25:14 +0900</pubDate>
-    <lastBuildDate>Thu, 18 Mar 2021 13:25:14 +0900</lastBuildDate>
+    <pubDate>Fri, 26 Mar 2021 18:26:59 +0900</pubDate>
+    <lastBuildDate>Fri, 26 Mar 2021 18:26:59 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
+    
+      <item>
+        <title>환경구축</title>
+        <description>&lt;h3 id=&quot;환경구축&quot;&gt;환경구축&lt;/h3&gt; &lt;p&gt;OS는 Windows 환경이다.&lt;/p&gt; &lt;p&gt;설치 항목은 아래와 같다.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Node.js ( https://nodejs.org/ko/download/ )&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Yarn ( &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install --global yarn&lt;/code&gt; )&lt;/p&gt; &lt;p&gt;Node.js과 함께 설치되는 npm을...</description>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/react/2021/03/26/React-Start.html</link>
+        <guid isPermaLink="true">http://localhost:4000/react/2021/03/26/React-Start.html</guid>
+        
+        
+        <category>react</category>
+        
+      </item>
+    
+      <item>
+        <title>JSX</title>
+        <description>&lt;h2 id=&quot;코드이해&quot;&gt;코드이해&lt;/h2&gt; &lt;p&gt;전에 만들었던 리액트 프로젝트의 src/App.js 를 보자&lt;/p&gt; &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/* src/App.js */&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;...</description>
+        <pubDate>Fri, 26 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/react/2021/03/26/JSX.html</link>
+        <guid isPermaLink="true">http://localhost:4000/react/2021/03/26/JSX.html</guid>
+        
+        
+        <category>react</category>
+        
+      </item>
+    
+      <item>
+        <title>React 소개</title>
+        <description>&lt;h3 id=&quot;프론트엔드-라이브러리프레임워크&quot;&gt;프론트엔드 라이브러리/프레임워크&lt;/h3&gt; &lt;p&gt;프로젝트가 사용자와의 상호작용이 별로 없다면, 프론트엔드 라이브러리는 필요하지 않다. 하지만 프로젝트가 규모가 커지고, 다양한 유저 인터페이스와 상호작용을 제공하게 된다면, 많은 DOM 요소들을 직접 관리하고 그 코드를 정리하는건...</description>
+        <pubDate>Mon, 22 Mar 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/react/2021/03/22/React-Intro.html</link>
+        <guid isPermaLink="true">http://localhost:4000/react/2021/03/22/React-Intro.html</guid>
+        
+        
+        <category>react</category>
+        
+      </item>
     
       <item>
         <title>윈도우에서 특정 port kill하기</title>
@@ -91,42 +127,6 @@
         
         
         <category>server</category>
-        
-      </item>
-    
-      <item>
-        <title>json load, loads, dump, dumps</title>
-        <description>&lt;h3 id=&quot;jsondump-jsondumps&quot;&gt;json.dump, json.dumps&lt;/h3&gt; &lt;p&gt;dump 계열은 파이썬의 객체(dict 등)를 다른 형태로 변환한다.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;dump 함수는 파이썬 객체를 스트림 객체(파일 등)로 변환한다.&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;dumps 함수는 파이썬 객체를 한줄의(직렬화된) json 문자열로...</description>
-        <pubDate>Wed, 24 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/python/2021/02/24/JSON-load,-loads,-dump,-dumps.html</link>
-        <guid isPermaLink="true">http://localhost:4000/python/2021/02/24/JSON-load,-loads,-dump,-dumps.html</guid>
-        
-        
-        <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>csv파일 dict형태로 변환</title>
-        <description>&lt;p&gt;csv파일을 dictionary 형태로 변환하는 코드이다.&lt;/p&gt; &lt;p&gt;csv파일의 컬럼명을 바꿀 일이 있어 header를 새로 만들고 기존의 header는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next()&lt;/code&gt;로 건너 뛰었다.&lt;/p&gt; &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;csv_dict_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;csvfile&lt;/span&gt;&lt;span...</description>
-        <pubDate>Wed, 24 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/python/2021/02/24/Convert-CSV-to-Dict.html</link>
-        <guid isPermaLink="true">http://localhost:4000/python/2021/02/24/Convert-CSV-to-Dict.html</guid>
-        
-        
-        <category>python</category>
-        
-      </item>
-    
-      <item>
-        <title>select 태그의 선택된 value 가져오기</title>
-        <description>&lt;h4 id=&quot;select-태그의-선택된-value-가져오기&quot;&gt;select 태그의 선택된 value 가져오기&lt;/h4&gt; &lt;div class=&quot;language-jsp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;selectChoice&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;select&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;status&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;status&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;onchange=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fn_searchExt()&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;option&lt;/span&gt;...</description>
-        <pubDate>Wed, 10 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/jsp/2021/02/10/select-tag-selected-value.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jsp/2021/02/10/select-tag-selected-value.html</guid>
-        
-        
-        <category>jsp</category>
         
       </item>
     

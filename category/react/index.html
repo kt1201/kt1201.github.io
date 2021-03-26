@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>a 태그 페이지 이동(onclick)</title>
-  <meta name="description" content="a 태그 페이지 이동(onclick)">
+  <title>react</title>
+  <meta name="description" content="김기태의 블로그입니다.
+">
   
   <meta name="author" content="kt1201">
   <meta name="copyright" content="&copy; kt1201 2021">
@@ -41,10 +42,11 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="a 태그 페이지 이동(onclick)" />
-  <meta property="og:url" content="http://localhost:4000/jsp/2021/02/10/a-tag-onclick.html">
+  <meta property="og:description" content="김기태의 블로그입니다.
+" />
+  <meta property="og:url" content="http://localhost:4000/category/react/">
   <meta property="og:site_name" content="코  드  저  장  소" />
-  <meta property="og:title" content="a 태그 페이지 이동(onclick)" />
+  <meta property="og:title" content="react" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -55,17 +57,18 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="a 태그 페이지 이동(onclick)">
-  <meta name="twitter:description" content="a 태그 페이지 이동(onclick)">
+  <meta name="twitter:title" content="react">
+  <meta name="twitter:description" content="김기태의 블로그입니다.
+">
   <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/jsp/2021/02/10/a-tag-onclick.html">
+  <meta name="twitter:url" content="http://localhost:4000/category/react/">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/jsp/2021/02/10/a-tag-onclick.html">
+  <link rel="canonical" href="http://localhost:4000/category/react/">
 	<link rel="alternate" type="application/rss+xml" title="코  드  저  장  소" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
@@ -144,100 +147,34 @@
 
 
     <div class="page-content">
-        <div class="post">
+        <div class="wrapper">
+<div class="page">
 
-<div class="post-header-container " >
-  <div class="scrim ">
-    <header class="post-header">
-      <h1 class="title">a 태그 페이지 이동(onclick)</h1>
-      <p class="info">by <strong>kt1201</strong></p>
-    </header>
-  </div>
-</div>
+  <header class="post-header">
+    <h1 class="post-title">Posts in "React" (3)</h1>
+  </header>
 
-<div class="wrapper">
-
- <span class="page-divider">
+  <span class="page-divider">
   <span class="one"></span>
   <span class="two"></span>
 </span>
- 
-
-<section class="post-meta">
-  <div class="post-date">February 10, 2021</div>
-  <div class="post-categories">
-  in 
-    
-    <a href="/category/jsp">Jsp</a>
-    
-  
-  </div>
-</section>
-
-<article class="post-content">
-  <h4 id="a-태그-페이지-이동onclick">a 태그 페이지 이동(onclick)</h4>
-
-<div class="language-jsp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;ul&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0);"</span> <span class="na">onclick=</span><span class="s">"fn_cntcMthd();"</span><span class="nt">&gt;</span>수집유형<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0);"</span> <span class="na">onclick=</span><span class="s">"fn_system();"</span><span class="nt">&gt;</span>시스템<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"javascript:void(0);"</span> <span class="na">onclick=</span><span class="s">"fn_table();"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>테이블<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-<span class="nt">&lt;/ul&gt;</span>
-
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
-    <span class="c1">// 수집 유형 버튼</span>
-    <span class="kd">function</span> <span class="nx">fn_cntcMthd</span><span class="p">()</span> <span class="p">{</span>
-		<span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">/batchResult/cntcMthd</span><span class="dl">"</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">// 시스템 버튼</span>
-    <span class="kd">function</span> <span class="nx">fn_system</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">/batchResult/system</span><span class="dl">"</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="c1">// 테이블 버튼</span>
-    <span class="kd">function</span> <span class="nx">fn_table</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">/batchResult/table</span><span class="dl">"</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="nt">&lt;/script&gt;</span>
-</code></pre></div></div>
 
 
-</article>
-
-
-
-
-
-
-<section class="post-navigation">
-	<span class="prev-post">
-		
-			<a href="/jsp/2021/02/10/Is-this-null.html">
-				<span class="fa-stack fa-lg">
-					<i class="fa fa-square fa-stack-2x"></i>
-					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-				</span>
-				<span class="page-number">null 판별 코드</span>
-			</a>
-		
-	</span>
-	<span class="next-post">
-		
-			<a href="/jsp/2021/02/10/ajax-serialize().html">
-				<span class="page-number">serialize()를 이용한 ajax Form 데이터 전송하기</span>
-				<span class="fa-stack fa-lg">
-					<i class="fa fa-square fa-stack-2x"></i>
-					<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-				</span>
-			</a>
-		
-	</span>
-</section>
-
-
+  <article class="post-content">
+    <ul class="posts-list">
+      
+      <li><strong><a class="post-link" href="/react/2021/03/26/React-Start.html">환경구축</a></strong><span class="post-date"> - March 26, 2021</span></li>
+      
+      <li><strong><a class="post-link" href="/react/2021/03/26/JSX.html">JSX</a></strong><span class="post-date"> - March 26, 2021</span></li>
+      
+      <li><strong><a class="post-link" href="/react/2021/03/22/React-Intro.html">React 소개</a></strong><span class="post-date"> - March 22, 2021</span></li>
+      
+    </ul>
+  </article>
 
 </div>
 </div>
+<br>
 
     </div>
 
