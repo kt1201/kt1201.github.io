@@ -163,6 +163,28 @@
   
   <li>
     <h2>
+      <a class="post-link" href="/java/2020/12/22/HttpsURLConnection-headers.html">HttpsURLConnection의 headers값 가져오기</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>전에 올렸던 서버단에서 URL로 파일 다운로드받는 코드에서 추가해야할 부분이 생겼다. URL을 요청하면 headers값이 같이 온다. 기존에는 원래 header값들을 무시하고 새로 header를 만들었는데 처음 data.go.kr에서 받아오는 response header의 Content_TYPE과 CONTENT_DISPOSITION이 필요해서 가져와야 하는 경우가 생겼다 try { URL obj = new URL(dataurl); HttpsURLConnection con = (HttpsURLConnection) obj.openConnection(); // 해당 url 연결...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">December 22, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/java">Java</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
       <a class="post-link" href="/java/2020/12/16/JDBC-Hive-Connect.html">JDBC - Hive 연결(직접 연결)</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
@@ -246,28 +268,6 @@
     </section>
   </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/hadoop/2020/06/01/Before-Install.html">설치 전에...</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>데이터 종류 정형 데이터 필드 고정 text 형식의 데이터 반정형 데이터 필드 고정 X XML, JSON 비정형 데이터 다양한 데이터(사진, 동영상, 메신저, 위치정보) SQL vs NoSQL SQL 기존의 RDBMS mysql, oracle … NoSQL 비정형데이터를 처리하기 위한 기술 관계보다는 키와 값으로 단순 처리 조인 X, 샤딩 활용 mongoDB, Hbase, aws DynamoDB...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">June 1, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/hadoop">Hadoop</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
   
 </ul>
 
@@ -281,12 +281,14 @@
 			</span>
 		</a>
 	
-	<span class="page-number">Page 7 of 7</span>
+	<span class="page-number">Page 7 of 8</span>
 	
-		<span class="fa-stack fa-lg">
-			<i class="fa fa-square fa-stack-2x"></i>
-			<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-		</span>
+		<a class="newer-posts" href="/page/8/">
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+			</span>
+		</a>
 	
 	</p>
 </nav>

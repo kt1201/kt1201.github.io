@@ -163,6 +163,52 @@
   
   <li>
     <h2>
+      <a class="post-link" href="/python/2021/03/12/other-path-file-import.html">다른 폴더의 파일 import</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>동일폴더의 파일 import
+
+import a.py
+
+
+상위 폴더의 파일 import
+
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+import a.py
+
+
+시스템 환경변수 추가
+
+
+$ vi ~/bash_profile
+
+========= bash_profile =========
+...
+PYTHONPATH=$PYTHONPATH:/home/user/test
+export PYTHONPATH
+============================
+$ source ~/bash_profile
+
+
+</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">March 12, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/python">Python</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
       <a class="post-link" href="/database/2021/03/12/Transaction.html">트랜잭션(Transaction)</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
@@ -246,28 +292,6 @@
     </section>
   </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/python/2021/02/24/Convert-CSV-to-Dict.html">csv파일 dict형태로 변환</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>csv파일을 dictionary 형태로 변환하는 코드이다. csv파일의 컬럼명을 바꿀 일이 있어 header를 새로 만들고 기존의 header는 next()로 건너 뛰었다. def csv_dict_list(csvfile, fieldnames=None): reader = csv.DictReader(open(csvfile, 'rt', encoding="euc-kr"), fieldnames=fieldnames) dict_list = [] next(reader) # csv파일 한줄 건너 뛰기(컬럼 존재할 경우) for line in reader: dict_list.append(line) return dict_list csv = "doc/dat/sample.csv" # csv파일...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">February 24, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/python">Python</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
   
 </ul>
 
@@ -281,7 +305,7 @@
 			</span>
 		</a>
 	
-	<span class="page-number">Page 2 of 7</span>
+	<span class="page-number">Page 2 of 8</span>
 	
 		<a class="newer-posts" href="/page/3/">
 			<span class="fa-stack fa-lg">

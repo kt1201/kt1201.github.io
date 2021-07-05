@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>React 소개</title>
-  <meta name="description" content="프론트엔드 라이브러리/프레임워크">
+  <title>코  드  저  장  소 - page 8</title>
+  <meta name="description" content="김기태의 블로그입니다.
+">
   
   <meta name="author" content="kt1201">
   <meta name="copyright" content="&copy; kt1201 2021">
@@ -41,10 +42,11 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="프론트엔드 라이브러리/프레임워크" />
-  <meta property="og:url" content="http://localhost:4000/react/2021/03/22/React-Intro.html">
+  <meta property="og:description" content="김기태의 블로그입니다.
+" />
+  <meta property="og:url" content="http://localhost:4000/page/8/index.html">
   <meta property="og:site_name" content="코  드  저  장  소" />
-  <meta property="og:title" content="React 소개" />
+  <meta property="og:title" content="코  드  저  장  소 - page 8" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -55,17 +57,18 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="React 소개">
-  <meta name="twitter:description" content="프론트엔드 라이브러리/프레임워크">
+  <meta name="twitter:title" content="코  드  저  장  소 - page 8">
+  <meta name="twitter:description" content="김기태의 블로그입니다.
+">
   <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/react/2021/03/22/React-Intro.html">
+  <meta name="twitter:url" content="http://localhost:4000/page/8/index.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/react/2021/03/22/React-Intro.html">
+  <link rel="canonical" href="http://localhost:4000/page/8/">
 	<link rel="alternate" type="application/rss+xml" title="코  드  저  장  소" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
@@ -144,98 +147,61 @@
 
 
     <div class="page-content">
-        <div class="post">
+        <div class="home">
 
-<div class="post-header-container " >
-  <div class="scrim ">
-    <header class="post-header">
-      <h1 class="title">React 소개</h1>
-      <p class="info">by <strong>kt1201</strong></p>
+<div class="site-header-container has-cover" style="background-image: url(/assets/header_image.jpg);">
+  <div class="scrim has-cover">
+    <header class="site-header">
+      <h1 class="title">코  드  저  장  소</h1>
+      <p class="subtitle">내 컴퓨터에서만 안돌아가</p>
     </header>
   </div>
 </div>
 
 <div class="wrapper">
-
- <span class="page-divider">
-  <span class="one"></span>
-  <span class="two"></span>
-</span>
- 
-
-<section class="post-meta">
-  <div class="post-date">March 22, 2021</div>
-  <div class="post-categories">
-  in 
-    
-    <a href="/category/react">React</a>
-    
+<ul class="post-list">
   
-  </div>
-</section>
+  <li>
+    <h2>
+      <a class="post-link" href="/hadoop/2020/06/01/Before-Install.html">설치 전에...</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>데이터 종류 정형 데이터 필드 고정 text 형식의 데이터 반정형 데이터 필드 고정 X XML, JSON 비정형 데이터 다양한 데이터(사진, 동영상, 메신저, 위치정보) SQL vs NoSQL SQL 기존의 RDBMS mysql, oracle … NoSQL 비정형데이터를 처리하기 위한 기술 관계보다는 키와 값으로 단순 처리 조인 X, 샤딩 활용 mongoDB, Hbase, aws DynamoDB...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">June 1, 2020</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/hadoop">Hadoop</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  
+</ul>
 
-<article class="post-content">
-  <h3 id="프론트엔드-라이브러리프레임워크">프론트엔드 라이브러리/프레임워크</h3>
-
-<p>프로젝트가 사용자와의 상호작용이 별로 없다면, 프론트엔드 라이브러리는 필요하지 않다.
-하지만 프로젝트가 규모가 커지고, 다양한 유저 인터페이스와 상호작용을 제공하게 된다면, 많은 DOM 요소들을 직접 관리하고 그 코드를 정리하는건 정말 힘든 일이다.
-웹 개발을 하게 될 때, <strong>귀찮은 DOM 관리와 상태값 업데이트 관리를 최소화하고, 오직 기능 개발과 UI를 구현하는 것에 집중 할 수 있도록 하기 위해서</strong> 프론트엔드 라이브러리와 프레임와크들이 만들어 졌다.</p>
-
-<p>그 중에서 페이스북에서 만든 React에 대해서 소개할 것이다.</p>
-
-<h3 id="virtual-dom">Virtual DOM</h3>
-
-<p>React 이전의 프레임워크들은 데이터단의 Model, 사용자의 화면에서 보여지는 View, 사용자가 발생시키는 이벤트를 처리해주는 Controller로 이뤄진 MVC패턴, 여기서 파생된 MVVN, MVW 등의 패턴으로 이뤄져 있다.</p>
-
-<p>여기서 공통점은 Model이다. 양방향 바인딩을 통하여 Model에 있는 값이 변하면, View에서도 이를 <strong>변화</strong>시켜준다. 페이스북은 이 변화라는 것을 하지 말자, 데이터가 바뀌면 그냥 뷰를 날려버리고 새로 만들자 라는 생각을 했다. 이때 Model의 데이터가 바뀔 때마다 View를 새로 생성하면 성능적으로 큰 부담이 될 것이다. 그래서 나온것이 Virtual DOM이다.</p>
-
-<p>DOM에 변화가 생기면 렌더트리를 재생성하고(모든 요소들의 스타일이 다시 계산된다.) 레이아웃을 만들고 페인팅을 하는 과적이 다시 반복된다. 변화를 적용하기 위해 브라우저가 많이 연산을 해야한다는 소리고, 전체적인 프로세스를 비효율적으로 만든다.</p>
-
-<p>이 부분에서 Virtual DOM이 빛을 발한다. 만약 View에 변화가 있다면, 그 변화는 실제 DOM에 적용되기 전에 Virtual DOM에 먼저 적용시키고, 그 최종적인 결과를 DOM으로 전달해준다. 이로써, 브라우저 내에서 발생하는 연산의 양을 줄이면서 성능이 개선되는 것이다.</p>
-
-<p>다시 쉽게 말하면, Virtual DOM을 사용함으로써, 데이터가 바뀌었을 때 더이상 어떻게 업데이트 할지를 고려하는게 아니라, 일단 바뀐 데이터로 그려놓고, 비교를 해서 바뀐 부분만 찾아 바꿔준다. 그러므로 DOM fragment를 관리하는 과정을 수동을 하나하나 작업할 필요 없이, 자동화하고 추상화 하는 것이다.</p>
-
-<p>React를 명료하게 표현한다면, ““최적화 작업을 자동화해주는 React를 사용했을 때 생산성이 배가 된다.” 이다.</p>
-
-<h3 id="react의-장점">React의 장점</h3>
-
-<p>React는 정말 자유도가 높은 라이브러리이다. 예로, React 컴포넌트 스타일링을 할 때도 한가지 정해진 방식이 있는게 아니라 수많은 방식으로 할 수 있다.</p>
-
-<p>React 라이브러리는 View쪽만 관리하게 하고, 나머지 기능은 써드파티 라이브러리가 담당하게 함으로써 개발자들의 다양한 시도와 연구를 통하여 계속해서 성장해 나아갈 수 있다.</p>
-
-</article>
-
-
-
-
-
-
-<section class="post-navigation">
-	<span class="prev-post">
-		
-			<a href="/server/2021/03/12/windows-port-kill.html">
-				<span class="fa-stack fa-lg">
-					<i class="fa fa-square fa-stack-2x"></i>
-					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-				</span>
-				<span class="page-number">윈도우에서 특정 port kill하기</span>
-			</a>
-		
-	</span>
-	<span class="next-post">
-		
-			<a href="/react/2021/03/26/JSX.html">
-				<span class="page-number">JSX</span>
-				<span class="fa-stack fa-lg">
-					<i class="fa fa-square fa-stack-2x"></i>
-					<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-				</span>
-			</a>
-		
-	</span>
-</section>
-
-
+<nav class="pagination" role="navigation">
+	<p>
+    
+		<a class="newer-posts" href="/page/7/">
+			<span class="fa-stack fa-lg">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+			</span>
+		</a>
+	
+	<span class="page-number">Page 8 of 8</span>
+	
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-square fa-stack-2x"></i>
+			<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+		</span>
+	
+	</p>
+</nav>
 
 </div>
 </div>

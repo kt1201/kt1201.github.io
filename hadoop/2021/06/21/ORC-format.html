@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>react</title>
-  <meta name="description" content="김기태의 블로그입니다.
-">
+  <title>ORC 포맷이란?</title>
+  <meta name="description" content="개요">
   
   <meta name="author" content="kt1201">
   <meta name="copyright" content="&copy; kt1201 2021">
@@ -42,11 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="김기태의 블로그입니다.
-" />
-  <meta property="og:url" content="http://localhost:4000/category/react/">
+  <meta property="og:description" content="개요" />
+  <meta property="og:url" content="http://localhost:4000/hadoop/2021/06/21/ORC-format.html">
   <meta property="og:site_name" content="코  드  저  장  소" />
-  <meta property="og:title" content="react" />
+  <meta property="og:title" content="ORC 포맷이란?" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -57,18 +55,17 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="react">
-  <meta name="twitter:description" content="김기태의 블로그입니다.
-">
+  <meta name="twitter:title" content="ORC 포맷이란?">
+  <meta name="twitter:description" content="개요">
   <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/category/react/">
+  <meta name="twitter:url" content="http://localhost:4000/hadoop/2021/06/21/ORC-format.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/category/react/">
+  <link rel="canonical" href="http://localhost:4000/hadoop/2021/06/21/ORC-format.html">
 	<link rel="alternate" type="application/rss+xml" title="코  드  저  장  소" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
@@ -147,34 +144,110 @@
 
 
     <div class="page-content">
-        <div class="wrapper">
-<div class="page">
+        <div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">Posts in "React" (3)</h1>
-  </header>
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">ORC 포맷이란?</h1>
+      <p class="info">by <strong>kt1201</strong></p>
+    </header>
+  </div>
+</div>
 
-  <span class="page-divider">
+<div class="wrapper">
+
+ <span class="page-divider">
   <span class="one"></span>
   <span class="two"></span>
 </span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">June 21, 2021</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/hadoop">Hadoop</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <h3 id="개요">개요</h3>
+
+<p>하이브에 저장되는 파일 포맷들이 있다</p>
+
+<ul>
+  <li>RC file (Row Columnar)</li>
+  <li>ORC file (Optimized Row Columnar)</li>
+  <li>Parquet</li>
+  <li>….</li>
+</ul>
+
+<p>이러한 포맷들은 하이브 처리 속도를 높이기 위하여 개발되었다.</p>
+
+<p>하이브 초기에는 RC 파일 포맷이 사용되었다. RC file 포맷은 각 컬럼을 하나의 파일 묶음으로 분산 저장되는 포맷이었다.</p>
+
+<p>저장에는 큰 문제가 없지만, read과정에서 다시 모으는 조인 비용이 너무 크다는 문제점이 있었다.</p>
+
+<p>이러한 문제점을 해결하기 위해 나온 것이 ORC file 포맷이다.</p>
+
+<p>RC file 포맷처럼 <strong>컬럼 단위로 파일을 기록하되, 인덱스도 함께 기록</strong>하였기 때문에 read 과정에서의 성능 향상이 이루어졌다.</p>
+
+<h3 id="특징">특징</h3>
+
+<ul>
+  <li>각 task의 결과가 하나의 파일로 생성 -&gt; 네임노드 부하 줄여줌</li>
+  <li>하이브 타입 지원</li>
+  <li>파일에 경량 인덱스 저장</li>
+  <li>데이터 타입 기반의 block-mode 압축</li>
+  <li>하나의 파일을 여러개 리더로 동시 읽기 가능</li>
+  <li>파일 읽기 쓰기에 일정한 메모리 용량만 필요</li>
+  <li>필드의 추가나 제거가 가능한 메타 데이터는 Protocol buffers를 사용하여 저장</li>
+</ul>
+
+<h3 id="구조">구조</h3>
+
+<p><img src="https://kt1201.github.io/assets/posts/20210621_hadoop_ORC-Structure.png" alt="20210621_hadoop_ORC-Structure" /></p>
+
+</article>
 
 
-  <article class="post-content">
-    <ul class="posts-list">
-      
-      <li><strong><a class="post-link" href="/react/2021/03/26/React-Start.html">환경구축</a></strong><span class="post-date"> - March 26, 2021</span></li>
-      
-      <li><strong><a class="post-link" href="/react/2021/03/26/JSX.html">JSX</a></strong><span class="post-date"> - March 26, 2021</span></li>
-      
-      <li><strong><a class="post-link" href="/react/2021/03/22/React-Intro.html">React 소개</a></strong><span class="post-date"> - March 22, 2021</span></li>
-      
-    </ul>
-  </article>
+
+
+
+
+<section class="post-navigation">
+	<span class="prev-post">
+		
+			<a href="/hadoop/2021/05/26/Hive-Table-Create-Drop.html">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+				</span>
+				<span class="page-number">hive로 테이블 생성, 조회, 삭제</span>
+			</a>
+		
+	</span>
+	<span class="next-post">
+		
+			<a href="/hadoop/2021/07/02/Ranger-KMS.html">
+				<span class="page-number">Ranger KMS를 통해 계정별 hadoop 접근 권한 부여</span>
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+		
+	</span>
+</section>
+
+
 
 </div>
 </div>
-<br>
 
     </div>
 

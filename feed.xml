@@ -6,43 +6,55 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 26 Mar 2021 18:26:59 +0900</pubDate>
-    <lastBuildDate>Fri, 26 Mar 2021 18:26:59 +0900</lastBuildDate>
+    <pubDate>Mon, 05 Jul 2021 17:30:27 +0900</pubDate>
+    <lastBuildDate>Mon, 05 Jul 2021 17:30:27 +0900</lastBuildDate>
     <generator>Jekyll v3.9.0</generator>
     
       <item>
-        <title>환경구축</title>
-        <description>&lt;h3 id=&quot;환경구축&quot;&gt;환경구축&lt;/h3&gt; &lt;p&gt;OS는 Windows 환경이다.&lt;/p&gt; &lt;p&gt;설치 항목은 아래와 같다.&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;Node.js ( https://nodejs.org/ko/download/ )&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;Yarn ( &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm install --global yarn&lt;/code&gt; )&lt;/p&gt; &lt;p&gt;Node.js과 함께 설치되는 npm을...</description>
-        <pubDate>Fri, 26 Mar 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/react/2021/03/26/React-Start.html</link>
-        <guid isPermaLink="true">http://localhost:4000/react/2021/03/26/React-Start.html</guid>
+        <title>서데(SerDe)</title>
+        <description>&lt;p&gt;서데(SerDe, Serializer/Deserialaizer)는 하이브가 데이터를 해석하는 방법을 제공한다. 예를 들어 하둡에 Json 파일을 따로 전처리하지 않고 서데를 이용하여 바로 집어 넣으면 하이브에서 Row 포맷으로 변환하여 읽을 수 있게 된다.&lt;/p&gt; &lt;p&gt;하이브는 서데와...</description>
+        <pubDate>Mon, 05 Jul 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/hadoop/2021/07/05/JsonSerDe.html</link>
+        <guid isPermaLink="true">http://localhost:4000/hadoop/2021/07/05/JsonSerDe.html</guid>
         
         
-        <category>react</category>
-        
-      </item>
-    
-      <item>
-        <title>JSX</title>
-        <description>&lt;h2 id=&quot;코드이해&quot;&gt;코드이해&lt;/h2&gt; &lt;p&gt;전에 만들었던 리액트 프로젝트의 src/App.js 를 보자&lt;/p&gt; &lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/* src/App.js */&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;React&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;react&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;import&lt;/span&gt;...</description>
-        <pubDate>Fri, 26 Mar 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/react/2021/03/26/JSX.html</link>
-        <guid isPermaLink="true">http://localhost:4000/react/2021/03/26/JSX.html</guid>
-        
-        
-        <category>react</category>
+        <category>hadoop</category>
         
       </item>
     
       <item>
-        <title>React 소개</title>
-        <description>&lt;h3 id=&quot;프론트엔드-라이브러리프레임워크&quot;&gt;프론트엔드 라이브러리/프레임워크&lt;/h3&gt; &lt;p&gt;프로젝트가 사용자와의 상호작용이 별로 없다면, 프론트엔드 라이브러리는 필요하지 않다. 하지만 프로젝트가 규모가 커지고, 다양한 유저 인터페이스와 상호작용을 제공하게 된다면, 많은 DOM 요소들을 직접 관리하고 그 코드를 정리하는건...</description>
-        <pubDate>Mon, 22 Mar 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/react/2021/03/22/React-Intro.html</link>
-        <guid isPermaLink="true">http://localhost:4000/react/2021/03/22/React-Intro.html</guid>
+        <title>Ranger KMS를 통해 계정별 hadoop 접근 권한 부여</title>
+        <description>&lt;h3 id=&quot;ranger란&quot;&gt;Ranger란?&lt;/h3&gt; &lt;p&gt;하둡 전체 서비스에 대한 보안 정책을 적용할 수 있고 관리 및 운영할 수 있는 프레임워크이다.&lt;/p&gt; &lt;p&gt;하둡의 보안관련 조치는 대부분 Ranger에서 처리 가능하다고 보면 된다.&lt;/p&gt; &lt;h3 id=&quot;ranger-architecture&quot;&gt;Ranger Architecture&lt;/h3&gt; &lt;p&gt;&lt;img...</description>
+        <pubDate>Fri, 02 Jul 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/hadoop/2021/07/02/Ranger-KMS.html</link>
+        <guid isPermaLink="true">http://localhost:4000/hadoop/2021/07/02/Ranger-KMS.html</guid>
         
         
-        <category>react</category>
+        <category>hadoop</category>
+        
+      </item>
+    
+      <item>
+        <title>ORC 포맷이란?</title>
+        <description>&lt;h3 id=&quot;개요&quot;&gt;개요&lt;/h3&gt; &lt;p&gt;하이브에 저장되는 파일 포맷들이 있다&lt;/p&gt; &lt;ul&gt; &lt;li&gt;RC file (Row Columnar)&lt;/li&gt; &lt;li&gt;ORC file (Optimized Row Columnar)&lt;/li&gt; &lt;li&gt;Parquet&lt;/li&gt; &lt;li&gt;….&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;이러한 포맷들은 하이브 처리 속도를 높이기 위하여 개발되었다.&lt;/p&gt; &lt;p&gt;하이브 초기에는...</description>
+        <pubDate>Mon, 21 Jun 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/hadoop/2021/06/21/ORC-format.html</link>
+        <guid isPermaLink="true">http://localhost:4000/hadoop/2021/06/21/ORC-format.html</guid>
+        
+        
+        <category>hadoop</category>
+        
+      </item>
+    
+      <item>
+        <title>hive로 테이블 생성, 조회, 삭제</title>
+        <description>&lt;p&gt;hive에는 내부 테이블(매니지드 테이블)과 외부 테이블이라고 불리는 테이블 저장 방식이 있다. 이에 대해 먼저 알아보자&lt;/p&gt; &lt;h3 id=&quot;hive-내부-테이블과-외부-테이블의-차이&quot;&gt;hive 내부 테이블과 외부 테이블의 차이&lt;/h3&gt; &lt;p&gt;내부 테이블과 외부 테이블의 차이점은 데이터 소유자가 hive이냐,...</description>
+        <pubDate>Wed, 26 May 2021 00:00:00 +0900</pubDate>
+        <link>http://localhost:4000/hadoop/2021/05/26/Hive-Table-Create-Drop.html</link>
+        <guid isPermaLink="true">http://localhost:4000/hadoop/2021/05/26/Hive-Table-Create-Drop.html</guid>
+        
+        
+        <category>hadoop</category>
         
       </item>
     
@@ -112,18 +124,6 @@
         <pubDate>Sat, 06 Mar 2021 00:00:00 +0900</pubDate>
         <link>http://localhost:4000/server/2021/03/06/(Docker)Docker.html</link>
         <guid isPermaLink="true">http://localhost:4000/server/2021/03/06/(Docker)Docker.html</guid>
-        
-        
-        <category>server</category>
-        
-      </item>
-    
-      <item>
-        <title>Proxy 서버 생성</title>
-        <description>&lt;h3 id=&quot;proxy-서버란&quot;&gt;Proxy 서버란?&lt;/h3&gt; &lt;p&gt;Proxy는 자신을 통해서 다른 네트워크에 간접적으로 접속할 수 있도록 해주는 컴퓨터 혹은 프로그램을 가리킨다.&lt;/p&gt; &lt;p&gt;요청을 중계하는 프로그램. proxy 프로그램은 서버로서 작동하기 때문에 일반적으로 proxy 서버라고 한다.&lt;/p&gt; &lt;p&gt;&lt;img...</description>
-        <pubDate>Wed, 24 Feb 2021 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/server/2021/02/24/Foward-Proxy.html</link>
-        <guid isPermaLink="true">http://localhost:4000/server/2021/02/24/Foward-Proxy.html</guid>
         
         
         <category>server</category>

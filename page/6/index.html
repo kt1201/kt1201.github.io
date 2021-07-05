@@ -163,6 +163,28 @@
   
   <li>
     <h2>
+      <a class="post-link" href="/linux/2021/01/06/command-Is-Success.html">명령어 성공 여부</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>명령어를 실행하면 그에 따른 return이 $?에 저장이 된다. 0 이 리턴되면 정상, 0이 리턴되지 않으면 오류로 간주 쉘스크립트로 만들면 아래와 같다. #!/bin/sh ls /etc | grep hosts if [ $? -eq 0 ];then echo "CMD OK!" else echo "CMD Failure!" exit(9) fi 그런데 더 간단하게 보이는 방법으로서 명령을 실행하고 나서...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">January 6, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/linux">Linux</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
       <a class="post-link" href="/java/2021/01/05/(Spring)-Multi-Datasource.html">(Spring) 다중 datasource 설정</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
@@ -269,28 +291,6 @@ iframe의 src에 html의 실제 경로를 넣으면 chrome에서
     </section>
   </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/java/2020/12/22/HttpsURLConnection-headers.html">HttpsURLConnection의 headers값 가져오기</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>전에 올렸던 서버단에서 URL로 파일 다운로드받는 코드에서 추가해야할 부분이 생겼다. URL을 요청하면 headers값이 같이 온다. 기존에는 원래 header값들을 무시하고 새로 header를 만들었는데 처음 data.go.kr에서 받아오는 response header의 Content_TYPE과 CONTENT_DISPOSITION이 필요해서 가져와야 하는 경우가 생겼다 try { URL obj = new URL(dataurl); HttpsURLConnection con = (HttpsURLConnection) obj.openConnection(); // 해당 url 연결...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">December 22, 2020</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/java">Java</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
   
 </ul>
 
@@ -304,7 +304,7 @@ iframe의 src에 html의 실제 경로를 넣으면 chrome에서
 			</span>
 		</a>
 	
-	<span class="page-number">Page 6 of 7</span>
+	<span class="page-number">Page 6 of 8</span>
 	
 		<a class="newer-posts" href="/page/7/">
 			<span class="fa-stack fa-lg">

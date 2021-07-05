@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>환경구축</title>
-  <meta name="description" content="환경구축">
+  <title>Ranger KMS를 통해 계정별 hadoop 접근 권한 부여</title>
+  <meta name="description" content="Ranger란?">
   
   <meta name="author" content="kt1201">
   <meta name="copyright" content="&copy; kt1201 2021">
@@ -41,10 +41,10 @@
 
   
   <!-- Facebook OGP cards -->
-  <meta property="og:description" content="환경구축" />
-  <meta property="og:url" content="http://localhost:4000/react/2021/03/26/React-Start.html">
+  <meta property="og:description" content="Ranger란?" />
+  <meta property="og:url" content="http://localhost:4000/hadoop/2021/07/02/Ranger-KMS.html">
   <meta property="og:site_name" content="코  드  저  장  소" />
-  <meta property="og:title" content="환경구축" />
+  <meta property="og:title" content="Ranger KMS를 통해 계정별 hadoop 접근 권한 부여" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
@@ -55,17 +55,17 @@
   
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="환경구축">
-  <meta name="twitter:description" content="환경구축">
+  <meta name="twitter:title" content="Ranger KMS를 통해 계정별 hadoop 접근 권한 부여">
+  <meta name="twitter:description" content="Ranger란?">
   <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/react/2021/03/26/React-Start.html">
+  <meta name="twitter:url" content="http://localhost:4000/hadoop/2021/07/02/Ranger-KMS.html">
   
 
   
 
   <!-- Site styles -->
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/react/2021/03/26/React-Start.html">
+  <link rel="canonical" href="http://localhost:4000/hadoop/2021/07/02/Ranger-KMS.html">
 	<link rel="alternate" type="application/rss+xml" title="코  드  저  장  소" href="http://localhost:4000/feed.xml" />
 	
 	<!-- Tooltips -->
@@ -149,7 +149,7 @@
 <div class="post-header-container " >
   <div class="scrim ">
     <header class="post-header">
-      <h1 class="title">환경구축</h1>
+      <h1 class="title">Ranger KMS를 통해 계정별 hadoop 접근 권한 부여</h1>
       <p class="info">by <strong>kt1201</strong></p>
     </header>
   </div>
@@ -164,79 +164,45 @@
  
 
 <section class="post-meta">
-  <div class="post-date">March 26, 2021</div>
+  <div class="post-date">July 2, 2021</div>
   <div class="post-categories">
   in 
     
-    <a href="/category/react">React</a>
+    <a href="/category/hadoop">Hadoop</a>
     
   
   </div>
 </section>
 
 <article class="post-content">
-  <h3 id="환경구축">환경구축</h3>
+  <h3 id="ranger란">Ranger란?</h3>
 
-<p>OS는 Windows 환경이다.</p>
+<p>하둡 전체 서비스에 대한 보안 정책을 적용할 수 있고 관리 및 운영할 수 있는 프레임워크이다.</p>
 
-<p>설치 항목은 아래와 같다.</p>
+<p>하둡의 보안관련 조치는 대부분 Ranger에서 처리 가능하다고 보면 된다.</p>
+
+<h3 id="ranger-architecture">Ranger Architecture</h3>
+
+<p><img src="https://kt1201.github.io/assets/posts/20210702_hadoop_Ranger-KMS.png" alt="20210702_hadoop_Ranger-KMS" /></p>
+
+<p>Ranger는 hadoop의 전체 컴포넌트에 대한 Ranger 플러그인을 활성화하여 모든 액세스를 제어 가능하다.</p>
+
+<p>Ranger 플러그인과  Ranger Policy Server 간에는 양방향 통신이 이루어지며</p>
+
+<p>Ranger 플러그인은 정기적으로(30초)  Ranger Policy Server를 호출하여 새로운 정책이 정의되었는지 확인한다.</p>
+
+<h3 id="ranger-kms">Ranger KMS</h3>
+
+<p>Ranger KMS(Key Management Service)는 HDFS “미사용 데이터” 암호화를 위한 확장 가능한 암호화 키 관리 서비스를 제공한다.</p>
+
+<p>Ranger KMS의 세가지 주요 기능은 아래와 같다.</p>
 
 <ul>
-  <li>
-    <p>Node.js ( https://nodejs.org/ko/download/ )</p>
-  </li>
-  <li>
-    <p>Yarn ( <code class="language-plaintext highlighter-rouge">npm install --global yarn</code> )</p>
-
-    <p>Node.js과 함께 설치되는 npm을 이용해도 되지만, yarn이 npm보다 더 빠르며 효율적인 캐시 시스템과 기타 부가 기능을 제공하므로 설치한다.</p>
-  </li>
-  <li>Visual Stuido Code (유용한 Extension 항목을 아래와 같다.)
-    <ul>
-      <li>ESLint : 자바스크립트 문법 및 코드스타일을 검사해주는 도구</li>
-      <li>Reactjs Code Snippets : 제작자 charalampos karypidis. 코드 스니펫 모음</li>
-      <li>Prettier-Code formatter : 코드 스타일 자동 정리</li>
-    </ul>
-  </li>
-  <li>Git ( https://git-scm.com/download/ )</li>
+  <li><strong>키 관리</strong> . Ranger 관리자는 웹 UI 또는 REST API를 사용하여 키를 생성, 업데이트 또는 삭제할 수있는 기능을 제공한다. 모든 Hadoop KMS API는 keyadmin 사용자 이름 및 암호를 사용하여 Ranger KMS와 함께 작동한다.</li>
+  <li><strong>액세스 제어 정책</strong> . Ranger 관리자는 Ranger KMS 내에서 액세스 제어 정책을 관리하는 기능도 제공한다. 액세스 정책은 키 생성 또는 관리 권한을 제어하여 Hadoop에서 암호화 된 데이터에 대한 또 다른 보안 계층을 추가한다.</li>
+  <li><strong>감사</strong> . Ranger는 Ranger KMS가 수행하는 모든 작업에 대한 전체 감사 추적을 제공한다.</li>
 </ul>
 
-<h3 id="create-react-app으로-프로젝트-생성하기">create-react-app으로 프로젝트 생성하기</h3>
-
-<p>create-react-app은 리액트 프로젝트를 생성할 때 필요한 웹팩, 바벨의 설치 및 설정 과정을 생략하고 바로 간편하게 프로젝트 작업 환경을 구축해주는 도구이다. 후에 설정을 커스터마이징 할 수도 있다.</p>
-
-<p>hello-react라는 리액트 프로젝트를 하나 만들어보자. 명령어는 아래와 같다.</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>yarn create react-app hello-react  <span class="c"># npm init react-app hello-react</span>
-yarn create v1.22.10
-<span class="o">[</span>1/4] Resolving packages...
-<span class="o">[</span>2/4] Fetching packages...
-<span class="o">[</span>3/4] Linking dependencies...
-<span class="o">[</span>4/4] Building fresh packages...
-
-... <span class="o">(</span>생략<span class="o">)</span> ...
-
-Happy hacking!
-Done <span class="k">in </span>129.58s.
-</code></pre></div></div>
-
-<p>프로젝트 생성이 완료되었다. 프로젝트 디렉터리로 이동하여 리액트 개발 전용 서버를 구동해 보자</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>hello-react
-<span class="nv">$ </span>yarn start  <span class="c"># npm start</span>
-</code></pre></div></div>
-
-<p>터미널이 아래와 같이 뜨고, 3000번 포트로 리액트 로고가 보이는 검정 페이지 하나가 띄워지면 구동이 된것이다.</p>
-
-<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Compiled successfully!
-
-You can now view hello-react <span class="k">in </span>the browser.     
-
-  Local:            http://localhost:3000        
-  On Your Network:  http://192.168.40.169:3000   
-
-Note that the development build is not optimized.
-To create a production build, use yarn build.
-</code></pre></div></div>
 
 </article>
 
@@ -248,16 +214,24 @@ To create a production build, use yarn build.
 <section class="post-navigation">
 	<span class="prev-post">
 		
-			<a href="/react/2021/03/26/JSX.html">
+			<a href="/hadoop/2021/06/21/ORC-format.html">
 				<span class="fa-stack fa-lg">
 					<i class="fa fa-square fa-stack-2x"></i>
 					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
 				</span>
-				<span class="page-number">JSX</span>
+				<span class="page-number">ORC 포맷이란?</span>
 			</a>
 		
 	</span>
 	<span class="next-post">
+		
+			<a href="/hadoop/2021/07/05/JsonSerDe.html">
+				<span class="page-number">서데(SerDe)</span>
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
 		
 	</span>
 </section>

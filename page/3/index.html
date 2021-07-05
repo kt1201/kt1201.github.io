@@ -163,6 +163,28 @@
   
   <li>
     <h2>
+      <a class="post-link" href="/python/2021/02/24/Convert-CSV-to-Dict.html">csv파일 dict형태로 변환</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>csv파일을 dictionary 형태로 변환하는 코드이다. csv파일의 컬럼명을 바꿀 일이 있어 header를 새로 만들고 기존의 header는 next()로 건너 뛰었다. def csv_dict_list(csvfile, fieldnames=None): reader = csv.DictReader(open(csvfile, 'rt', encoding="euc-kr"), fieldnames=fieldnames) dict_list = [] next(reader) # csv파일 한줄 건너 뛰기(컬럼 존재할 경우) for line in reader: dict_list.append(line) return dict_list csv = "doc/dat/sample.csv" # csv파일...</p>
+    </section>
+    <section class="post-meta">
+      <div class="post-date">February 24, 2021</div>
+      <div class="post-categories">
+      in 
+        
+        <a href="/category/python">Python</a>
+        
+      
+      </div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
       <a class="post-link" href="/server/2021/02/24/Foward-Proxy.html">Proxy 서버 생성</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
@@ -261,28 +283,6 @@
     </section>
   </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/jsp/2021/02/10/a-tag-onclick.html">a 태그 페이지 이동(onclick)</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>a 태그 페이지 이동(onclick) &lt;ul&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_cntcMthd();"&gt;수집유형&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_system();"&gt;시스템&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href="javascript:void(0);" onclick="fn_table();" class="active"&gt;테이블&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;script type="text/javascript"&gt; // 수집 유형 버튼 function fn_cntcMthd() { location.href = "/batchResult/cntcMthd"; } // 시스템 버튼 function fn_system() { location.href = "/batchResult/system"; } // 테이블 버튼 function fn_table() { location.href = "/batchResult/table"; } &lt;/script&gt;...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">February 10, 2021</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/jsp">Jsp</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
   
 </ul>
 
@@ -296,7 +296,7 @@
 			</span>
 		</a>
 	
-	<span class="page-number">Page 3 of 7</span>
+	<span class="page-number">Page 3 of 8</span>
 	
 		<a class="newer-posts" href="/page/4/">
 			<span class="fa-stack fa-lg">

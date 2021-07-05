@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>hive로 테이블 생성, 조회, 삭제</title>
+  <meta name="description" content="hive에는 내부 테이블(매니지드 테이블)과 외부 테이블이라고 불리는 테이블 저장 방식이 있다. 이에 대해 먼저 알아보자">
+  
+  <meta name="author" content="kt1201">
+  <meta name="copyright" content="&copy; kt1201 2021">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <!-- Facebook OGP cards -->
+  <meta property="og:description" content="hive에는 내부 테이블(매니지드 테이블)과 외부 테이블이라고 불리는 테이블 저장 방식이 있다. 이에 대해 먼저 알아보자" />
+  <meta property="og:url" content="http://localhost:4000/hadoop/2021/05/26/Hive-Table-Create-Drop.html">
+  <meta property="og:site_name" content="코  드  저  장  소" />
+  <meta property="og:title" content="hive로 테이블 생성, 조회, 삭제" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="612" />
+  <meta property="og:image:height" content="605" />
+  
+
+  
+  <!-- Twitter: card tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="hive로 테이블 생성, 조회, 삭제">
+  <meta name="twitter:description" content="hive에는 내부 테이블(매니지드 테이블)과 외부 테이블이라고 불리는 테이블 저장 방식이 있다. 이에 대해 먼저 알아보자">
+  <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
+  <meta name="twitter:url" content="http://localhost:4000/hadoop/2021/05/26/Hive-Table-Create-Drop.html">
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/hadoop/2021/05/26/Hive-Table-Create-Drop.html">
+	<link rel="alternate" type="application/rss+xml" title="코  드  저  장  소" href="http://localhost:4000/feed.xml" />
+	
+	<!-- Tooltips -->
+	<script type="text/javascript">
+		window.tooltips = []
+	</script>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/assets/logo.png" alt="코  드  저  장  소">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">hive로 테이블 생성, 조회, 삭제</h1>
+      <p class="info">by <strong>kt1201</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">May 26, 2021</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/category/hadoop">Hadoop</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>hive에는 내부 테이블(매니지드 테이블)과 외부 테이블이라고 불리는 테이블 저장 방식이 있다. 이에 대해 먼저 알아보자</p>
+
+<h3 id="hive-내부-테이블과-외부-테이블의-차이">hive 내부 테이블과 외부 테이블의 차이</h3>
+
+<p>내부 테이블과 외부 테이블의 차이점은 데이터 소유자가 hive이냐, 아니냐로 크게 구분할 수 있다. 아래 표를 보자.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>내부 테이블</th>
+      <th>외부 테이블</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>- hive 속성(hive.metastore.warehouse.dir)에서 정의한 디렉터리의 하위 디렉터리를 만들어서 저장<br />- hive에서 테이블을 삭제하면 테이블 내의 데이터도 삭제된다.</td>
+      <td>- 테이블을 생성할 때, EXTERNAL 키워드를 사용하며, LOCATION절에서 지정한 위치에 데이터가 존재한다는 것을 hive에게 알려준다.<br />- hive에서 테이블을 삭제하면, hive 내에서 메타데이터만 삭제될 뿐 데이터는 그대로 존재한다.<br />_ 떄문에 중요한 데이터의 경우 실수를 방지하기 위해 외부 테이블로 만드는 것을 권장한다.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>테이블의 속성이 내부 테이블인지 외부 테이블인지 확인할 수 있는 쿼리문은 아래와 같다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DESCRIBE</span> <span class="n">EXTENDED</span> <span class="err">테이블명</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이제 내부 테이블과 외부 테이블을 각각 생성, 조회, 삭제 해보자.</p>
+
+<h3 id="내부-테이블">내부 테이블</h3>
+
+<h5 id="테이블-생성">테이블 생성</h5>
+
+<p>CREATE 쿼리문은 기존 DB와 같다. 하지만 CSV형식의 txt파일 데이터를 집어넣기 위해 아래와 같이 쿼리문을 만든다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">test</span>
+<span class="p">(</span><span class="n">col1</span> <span class="n">string</span><span class="p">,</span> <span class="n">col2</span> <span class="n">string</span><span class="p">)</span>
+<span class="k">ROW</span> <span class="n">FORMAT</span> <span class="n">DELIMITED</span>
+<span class="n">FIELDS</span> <span class="n">TERMINATED</span> <span class="k">BY</span> <span class="s1">','</span>
+<span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>아래 명령어로 생성된 테이블의 스키마를 볼 수 있다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">show</span> <span class="k">create</span> <span class="k">table</span> <span class="n">test</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>이제 터미널로 가서 기본 경로인 <code class="language-plaintext highlighter-rouge">/user/hive/warehouse/</code>위치에 가서 테이블이 생성되었는지 확인해 보자.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>hadoop fs <span class="nt">-ls</span> /user/hive/warehouse/
+21/05/26 10:47:36 WARN util.NativeCodeLoader: Unable to load native-hadoop library <span class="k">for </span>your platform... using builtin-java classes where applicable
+Found 1 items
+drwxrwxr-x   - hive      supergroup          0 2021-05-26 10:47 /user/hive/warehouse/test
+</code></pre></div></div>
+
+<h5 id="데이터-생성-및-조회">데이터 생성 및 조회</h5>
+
+<p>아직 데이터를 넣어주지 않았기 때문에 test 안에는 아무것도 들어있지 않다. 아래와 같은 데이터 파일을 하나 생성하여 넣어주자.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># test.txt
+a,b
+a,b
+a,b
+a,b
+a,b
+</code></pre></div></div>
+
+<p>hive에서 INSERT문을 통하여 데이터를 넣을 수도 있지만 row마다 집어넣으면 시간이 너무 오래 걸리므로, 아래와 같은 명령어로 파일로 만들어 집어 넣는 방법을 지향한다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="n">hadoop</span> <span class="n">fs</span> <span class="o">-</span><span class="n">put</span> <span class="p">.</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">txt</span> <span class="o">/</span><span class="k">user</span><span class="o">/</span><span class="n">hive</span><span class="o">/</span><span class="n">warehouse</span><span class="o">/</span><span class="n">test</span>
+</code></pre></div></div>
+
+<p>위 명령어를 실행시킨 후 쿼리문으로 가서 조회를 해보면 데이터가 잘 들어와 있을 것이다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">test</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h5 id="테이블-삭제">테이블 삭제</h5>
+
+<p>아래 쿼리문으로 테이블을 삭제해보자</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">test</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>위에서 말했듯이 내부 테이블은 데이터의 소유자가 hive이므로 테이블을 삭제하면 hadoop 상의 test 폴더와 그 안의 데이터도 함께 삭제된다. 아래 명령어로 확인해 보자</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="n">hadoop</span> <span class="n">fs</span> <span class="o">-</span><span class="n">ls</span> <span class="o">/</span><span class="k">user</span><span class="o">/</span><span class="n">hive</span><span class="o">/</span><span class="n">warehouse</span><span class="o">/</span>
+</code></pre></div></div>
+
+<h3 id="외부-테이블">외부 테이블</h3>
+
+<h5 id="테이블-생성-1">테이블 생성</h5>
+
+<p>이번엔 외부 테이블을 생성해 주자. 외부 테이블은 EXTERNAL을 사용하여 생성하고, LOCATION절을 통해 데이터 위치를 하이브에게 알려준다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">EXTERNAL</span> <span class="k">TABLE</span> <span class="n">test</span>
+<span class="p">(</span><span class="n">col1</span> <span class="n">string</span><span class="p">,</span> <span class="n">col2</span> <span class="n">string</span><span class="p">)</span>
+<span class="k">ROW</span> <span class="n">FORMAT</span> <span class="n">DELIMITED</span>
+<span class="n">FIELDS</span> <span class="n">TERMINATED</span> <span class="k">BY</span> <span class="s1">','</span>
+<span class="n">STORED</span> <span class="k">AS</span> <span class="n">TEXTFILE</span>
+<span class="k">LOCATION</span> <span class="s1">'/user/hive/warehouse/test'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h5 id="데이터-생성-및-조회-1">데이터 생성 및 조회</h5>
+
+<p>데이터 생성 및 조회 방법은 전과 동일하다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="n">hadoop</span> <span class="n">fs</span> <span class="o">-</span><span class="n">put</span> <span class="p">.</span><span class="o">/</span><span class="n">test</span><span class="p">.</span><span class="n">txt</span> <span class="o">/</span><span class="k">user</span><span class="o">/</span><span class="n">hive</span><span class="o">/</span><span class="n">warehouse</span><span class="o">/</span><span class="n">test</span>
+</code></pre></div></div>
+
+<p>위 명령어를 실행시킨 후 쿼리문으로 가서 조회를 해보면 데이터가 잘 들어와 있을 것이다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">test</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h5 id="테이블-삭제-1">테이블 삭제</h5>
+
+<p>아래 쿼리문으로 테이블을 삭제해보자</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">DROP</span> <span class="k">TABLE</span> <span class="n">test</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>위에서 말했듯이 외부 테이블은 데이터의 소유자가 hive가 아니므로, 테이블을 삭제해도 메타 데이터만 삭제되고 실 데이터는 hadoop에 그대로 남아있다. 확인해 보자.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">$</span> <span class="n">hadoop</span> <span class="n">fs</span> <span class="o">-</span><span class="n">ls</span> <span class="o">/</span><span class="k">user</span><span class="o">/</span><span class="n">hive</span><span class="o">/</span><span class="n">warehouse</span><span class="o">/</span>
+<span class="mi">21</span><span class="o">/</span><span class="mi">05</span><span class="o">/</span><span class="mi">26</span> <span class="mi">10</span><span class="p">:</span><span class="mi">47</span><span class="p">:</span><span class="mi">36</span> <span class="n">WARN</span> <span class="n">util</span><span class="p">.</span><span class="n">NativeCodeLoader</span><span class="p">:</span> <span class="n">Unable</span> <span class="k">to</span> <span class="k">load</span> <span class="n">native</span><span class="o">-</span><span class="n">hadoop</span> <span class="n">library</span> <span class="k">for</span> <span class="n">your</span> <span class="n">platform</span><span class="p">...</span> <span class="k">using</span> <span class="n">builtin</span><span class="o">-</span><span class="n">java</span> <span class="n">classes</span> <span class="k">where</span> <span class="n">applicable</span>
+<span class="k">Found</span> <span class="mi">1</span> <span class="n">items</span>
+<span class="n">drwxrwxr</span><span class="o">-</span><span class="n">x</span>   <span class="o">-</span> <span class="n">hive</span>      <span class="n">supergroup</span>          <span class="mi">0</span> <span class="mi">2021</span><span class="o">-</span><span class="mi">05</span><span class="o">-</span><span class="mi">26</span> <span class="mi">10</span><span class="p">:</span><span class="mi">47</span> <span class="o">/</span><span class="k">user</span><span class="o">/</span><span class="n">hive</span><span class="o">/</span><span class="n">warehouse</span><span class="o">/</span><span class="n">test</span>
+</code></pre></div></div>
+
+
+</article>
+
+
+
+
+
+
+<section class="post-navigation">
+	<span class="prev-post">
+		
+			<a href="/server/2021/03/12/windows-port-kill.html">
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+				</span>
+				<span class="page-number">윈도우에서 특정 port kill하기</span>
+			</a>
+		
+	</span>
+	<span class="next-post">
+		
+			<a href="/hadoop/2021/06/21/ORC-format.html">
+				<span class="page-number">ORC 포맷이란?</span>
+				<span class="fa-stack fa-lg">
+					<i class="fa fa-square fa-stack-2x"></i>
+					<i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+				</span>
+			</a>
+		
+	</span>
+</section>
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">코  드  저  장  소</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+				
+	
+	<li class="nav-link"><a href="/about/">About</a>
+	
+
+	
+
+	
+
+	
+	<li class="nav-link"><a href="/posts/">Posts</a>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Contact</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:ktkim121@naver.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">ktkim121@naver.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://github.com/kt1201" title="Fork me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">kt1201</span>
+            </a>
+          </li>
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong><a href="/feed.xml">blog code</a></strong></p>
+      <p class="text">김기태의 블로그입니다.
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="//unpkg.com/popper.js@1"></script>
+<script src="//unpkg.com/tippy.js@5"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+	// Enable tooltips via Tippy.js
+	if (Array.isArray(window.tooltips)) {
+		window.tooltips.forEach(function(tooltip) {
+			var selector = tooltip[0];
+			var config = tooltip[1];
+			tippy(selector, config);
+		})
+	}
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
