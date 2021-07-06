@@ -192,7 +192,7 @@ Row object -&gt; Serializer -&gt; [key, value] -&gt; OutputFileFormat -&gt; HDFS
 
 <p>하이브에서 제공하는 기본 서데는 7가지(Avro, ORC, RegEx, Thrift, Parquet, CSV, JsonSerDe)가 있다. 각 서데는 STORED AS 에 지정하는 파일의 포맷에 따라 자동으로 선택된다.</p>
 
-<p>가장 많이 쓰는 반정형 데이터 형식인 json을 하둡에 넣고 서데를 이용하여 하이브로 조회해보자.</p>
+<p>가장 많이 쓰는 반정형 데이터 형식인 Json을 하둡에 넣고 서데를 이용하여 하이브로 조회해보자.</p>
 
 <p>넣을 데이터는 아래와 같다.</p>
 
@@ -316,7 +316,7 @@ Row object -&gt; Serializer -&gt; [key, value] -&gt; OutputFileFormat -&gt; HDFS
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>json 데이터를 정렬시켜 놓았지만, hadoop에 실제 들어가는 json은 정렬하지 말고 한줄로 들어가야 한다.</p>
+<p>위는 json 데이터를 정렬시켜 놓았지만, hadoop에 실제 들어가는 json은 정렬하지 말고 한줄로 들어가야 한다.</p>
 
 <p>json serde를 이용한 create문은 아래와 같다.</p>
 
@@ -497,6 +497,14 @@ Row object -&gt; Serializer -&gt; [key, value] -&gt; OutputFileFormat -&gt; HDFS
 <p>결과는 아래와 같다.</p>
 
 <p><img src="https://kt1201.github.io/assets/posts/20210705_hadoop_JsonSerDe2.png" alt="20210705_hadoop_JsonSerDe2" /></p>
+
+<p>데이터 총 개수를 구하는 쿼리문은 아래와 같다.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">select</span>
+	<span class="k">size</span><span class="p">(</span><span class="n">msgarr</span><span class="p">)</span>
+<span class="k">from</span> <span class="n">localdata</span> <span class="n">ld</span> <span class="k">lateral</span> <span class="k">view</span> <span class="n">explode</span><span class="p">(</span><span class="k">result</span><span class="p">.</span><span class="n">body</span><span class="p">.</span><span class="nv">`rows`</span><span class="p">.</span><span class="nv">`row`</span><span class="p">)</span> <span class="n">msgtable</span> <span class="k">as</span> <span class="n">msgarr</span>
+<span class="p">;</span>
+</code></pre></div></div>
 
 
 </article>
